@@ -1,0 +1,16 @@
+.component {
+  display: flex;
+  padding: 25px 0;
+}
+
+.title {
+  margin-top: 0;
+}
+
+.cover {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  width: 150px;
+  align-self: start;
+  margin-right: 5px;
+}

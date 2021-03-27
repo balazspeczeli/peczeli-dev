@@ -1,0 +1,14 @@
+.component {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.photo {
+  flex-shrink: 0;
+  background-image: url("/images/photo.jpg");
+  background-size: 80px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+}

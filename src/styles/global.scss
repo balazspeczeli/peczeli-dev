@@ -1,0 +1,87 @@
+:root {
+  --normal-text: #29353b;
+  --header-text: #1c2327;
+  --link-color: #308ddf;
+  --border-color: #c7c7c7;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+html,
+body {
+  padding: 0.5rem;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  color: var(--normal-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  position: relative;
+
+  &[target="_blank"] {
+    margin-right: 15px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 12px;
+      width: 12px;
+      background-size: 11px;
+      background-image: url(/icons/link.svg);
+      background-position: center right;
+      background-repeat: no-repeat;
+      margin-top: 7px;
+      margin-left: 1px;
+    }
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 0;
+  font-weight: 500;
+  color: var(--header-text);
+}
+
+h1 {
+  line-height: 1.15;
+  font-size: 2rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h2 {
+  line-height: 1.85;
+}
+
+h3 {
+  line-height: 1.5;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid var(--border-color);
+}
