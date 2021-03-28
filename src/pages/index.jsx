@@ -8,7 +8,7 @@ import Contact from "../sections/Contact";
 
 import { getPosts } from "../lib/posts";
 import { getCurrentlyReading } from "../lib/books";
-import accounts from "../../content/accounts.json";
+import accounts from "../content/accounts.json";
 
 const IndexPage = ({ posts, currentlyReading, accounts }) => {
   return (
