@@ -8,7 +8,11 @@ const Book = ({ title, author, cover, description }) => (
       </h3>
       <div dangerouslySetInnerHTML={{ __html: description }} />
     </div>
-    <img src={cover} className={styles.cover} />
+    <img
+      className={styles.cover}
+      src={cover}
+      alt={`Cover image for ${title}`}
+    />
   </div>
 );
 
