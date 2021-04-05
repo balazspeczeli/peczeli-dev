@@ -2,7 +2,7 @@ import styles from "./Book.module.scss";
 
 const Book = ({ title, author, cover, description }) => (
   <div className={styles.component}>
-    <div>
+    <div className={styles.description}>
       <h3 className={styles.title}>
         {title}, by {author}
       </h3>
