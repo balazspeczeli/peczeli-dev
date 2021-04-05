@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 import Introduction from "../components/Introduction/Introduction";
 import Book from "../components/Book/Book";
 
@@ -10,10 +12,10 @@ const BookshelfPage = ({ books }) => {
       <div>
         <h2>My bookshelf</h2>
         {books.map((book) => (
-          <>
+          <Fragment key={book.title}>
             <hr />
             <Book {...book} />
-          </>
+          </Fragment>
         ))}
         <hr />
         <Introduction />
