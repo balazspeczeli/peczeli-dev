@@ -1,7 +1,9 @@
+import styles from "./Post.module.scss";
+
 const Post = ({ title, date, content }) => (
-  <section>
-    <h2>{title}</h2>
-    <div>{date}</div>
+  <section className={styles.component}>
+    <h1 className={styles.title}>{title}</h1>
+    <div className={styles.date}>{date}</div>
     <div dangerouslySetInnerHTML={{ __html: content }} />
   </section>
 );

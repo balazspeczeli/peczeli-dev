@@ -1,5 +1,6 @@
 :root {
   --normal-text: #29353b;
+  --faded-text: #909090;
   --header-text: #1c2327;
   --link-color: #308ddf;
   --border-color: #c7c7c7;
@@ -16,7 +17,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--normal-text);
 }
 
@@ -41,7 +42,7 @@ a {
       background-image: url(/icons/link.svg);
       background-position: center right;
       background-repeat: no-repeat;
-      margin-top: 7px;
+      margin-top: 9px;
       margin-left: 1px;
     }
   }
@@ -59,26 +60,22 @@ img {
 h1,
 h2,
 h3 {
+  line-height: 1.25;
   margin-bottom: 0;
   font-weight: 500;
   color: var(--header-text);
 }
 
 h1 {
-  line-height: 1.15;
-  font-size: 2rem;
-
-  &:first-child {
-    margin-top: 0;
-  }
+  font-size: 40px;
 }
 
 h2 {
-  line-height: 1.85;
+  font-size: 32px;
 }
 
 h3 {
-  line-height: 1.5;
+  font-size: 24px;
 }
 
 hr {
