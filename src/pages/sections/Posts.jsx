@@ -1,4 +1,4 @@
-import PostsList from "../components/PostsList/PostsList";
+import PostsList from "../../components/PostsList/PostsList";
 
 const Posts = ({ posts }) => (
   <section>

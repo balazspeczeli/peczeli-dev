@@ -1,4 +1,4 @@
-import Introduction from "../components/Introduction/Introduction";
+import Introduction from "../../components/Introduction/Introduction";
 
 const Welcome = () => (
   <section>
