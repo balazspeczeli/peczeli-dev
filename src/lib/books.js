@@ -19,12 +19,11 @@ export const getBooks = () => {
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const matterResult = matter(fileContents);
 
-    if (matterResult.data.title === undefined) {
-      throw new Error(`Could not find "title" property in ${file}`);
-    }
-
-    if (matterResult.data.author === undefined) {
-      throw new Error(`Could not find "author" property in ${file}`);
+    const requiredKeys = ["title", "author", "year"];
+    for (const key of requiredKeys) {
+      if (!matterResult.data[key]) {
+        throw new Error(`Could not find "${key}" in ${file}`);
+      }
     }
 
     const coverImage = `${path.parse(file).name}.jpg`;
@@ -39,6 +38,7 @@ export const getBooks = () => {
         author: matterResult.data.author,
         cover: `/images/bookshelf/${coverImage}`,
         description: md.render(matterResult.content),
+        year: matterResult.data.year,
       });
     }
   });
