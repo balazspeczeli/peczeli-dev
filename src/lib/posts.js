@@ -14,12 +14,16 @@ export const getPosts = (options = {}) => {
     .map((file) => path.parse(file).name);
 
   postPaths.forEach((path) => {
+    let post;
+
     if (options.pathOnly) {
-      posts.push({ path });
+      post = { path };
     } else {
       const { title, date } = getPost(path);
-      posts.push({ path, title, date });
+      post = { path, title, date };
     }
+
+    posts.push(post);
   });
 
   posts.sort((a, b) => {
