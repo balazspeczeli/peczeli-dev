@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
+import { compareDesc } from "date-fns";
 import md from "./md";
 
 const contentDirectory = path.join(process.cwd(), "src", "content");
@@ -19,6 +20,10 @@ export const getPosts = (options = {}) => {
       const { title, date } = getPost(path);
       posts.push({ path, title, date });
     }
+  });
+
+  posts.sort((a, b) => {
+    return compareDesc(new Date(a.date), new Date(b.date));
   });
 
   return posts;
