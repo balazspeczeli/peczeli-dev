@@ -6,19 +6,15 @@
   --border-color: #c7c7c7;
 }
 
-html {
-  overflow-y: scroll;
-}
-
-html,
 body {
-  padding: 0.5rem;
-  margin: 0;
+  margin: 1rem 1rem 2rem 1rem;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
   color: var(--normal-text);
+
+  overflow-y: scroll;
 }
 
 * {
