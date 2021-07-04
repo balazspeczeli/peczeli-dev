@@ -4,6 +4,7 @@
   --header-text: #1c2327;
   --link-color: #308ddf;
   --border-color: #c7c7c7;
+  --bg-color: #f9f9f9;
   --code-default-color: #d4d4d4;
   --code-bg-color: #1e1e1e;
 }
@@ -86,4 +87,12 @@ p > code {
   padding: 0.15rem 0.5rem;
   color: var(--code-default-color);
   background-color: var(--code-bg-color);
+}
+
+blockquote {
+  margin-left: 2rem;
+  font-style: italic;
+  padding: 0.5rem;
+  border-left: 3px solid var(--border-color);
+  background-color: var(--bg-color);
 }
