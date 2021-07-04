@@ -20,7 +20,7 @@ const SideProjects = () => (
         href="https://github.com/balazsdavid987/music-catalogue-app"
         target="_blank"
       >
-        music catalogue app
+        music catalogue
       </a>
       . It's a simple CRUD app with an Angular frontend and a GraphQL API. There
       are two deployments so far:{" "}
