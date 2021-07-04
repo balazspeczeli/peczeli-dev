@@ -4,6 +4,8 @@
   --header-text: #1c2327;
   --link-color: #308ddf;
   --border-color: #c7c7c7;
+  --code-default-color: #d4d4d4;
+  --code-bg-color: #1e1e1e;
 }
 
 body {
@@ -77,4 +79,11 @@ h3 {
 hr {
   border: 0;
   border-bottom: 1px solid var(--border-color);
+}
+
+p > code {
+  border-radius: 5px;
+  padding: 0.15rem 0.5rem;
+  color: var(--code-default-color);
+  background-color: var(--code-bg-color);
 }
