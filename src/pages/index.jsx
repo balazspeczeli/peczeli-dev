@@ -11,8 +11,8 @@ const IndexPage = ({ posts, currentlyReading, accounts }) => {
     <Layout>
       <Welcome />
       <Posts posts={posts} />
-      <MyBookshelf currentlyReading={currentlyReading} />
-      <SideProjects />
+      {/*<MyBookshelf currentlyReading={currentlyReading} />*/}
+      {/*<SideProjects />*/}
       <Contact accounts={accounts} />
     </Layout>
   );
