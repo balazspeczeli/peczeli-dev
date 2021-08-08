@@ -24,6 +24,11 @@ body {
   box-sizing: border-box;
 }
 
+::selection {
+  background-color: #d1e6f8;
+  color: var(--normal-text);
+}
+
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -87,6 +92,11 @@ p > code {
   padding: 0.15rem 0.5rem;
   color: var(--code-default-color);
   background-color: var(--code-bg-color);
+
+  &::selection {
+    background: #6d6d6d;
+    color: #ffffff;
+  }
 }
 
 blockquote {
