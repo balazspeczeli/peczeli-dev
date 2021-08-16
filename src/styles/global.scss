@@ -106,3 +106,8 @@ blockquote {
   border-left: 3px solid var(--border-color);
   background-color: var(--bg-color);
 }
+
+img.centered {
+  max-width: 500px;
+  margin: auto;
+}
