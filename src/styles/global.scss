@@ -107,7 +107,13 @@ blockquote {
   background-color: var(--bg-color);
 }
 
-img.centered {
-  max-width: 500px;
-  margin: auto;
+img {
+  &.centered {
+    max-width: 500px;
+    margin: auto;
+  }
+
+  &.bordered {
+    border: 1px solid var(--border-color);
+  }
 }
