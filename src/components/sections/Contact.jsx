@@ -7,4 +7,4 @@ const Contact = ({ accounts }) => (
   </section>
 );
 
-export default Contact;
+export { Contact };

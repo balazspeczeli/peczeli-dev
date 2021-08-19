@@ -27,4 +27,4 @@ const MyBookshelf = ({ currentlyReading }) => (
   </section>
 );
 
-export default MyBookshelf;
+export { MyBookshelf };

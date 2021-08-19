@@ -1,5 +1,5 @@
 import Layout from "../components/Layout/Layout";
-import { Welcome, Posts, MyBookshelf, SideProjects, Contact } from "./sections";
+import { Welcome, Posts, MyBookshelf, Contact } from "../components/sections";
 
 import { getPosts } from "../lib/posts";
 import { getCurrentlyReading } from "../lib/books";
@@ -12,7 +12,6 @@ const IndexPage = ({ posts, currentlyReading, accounts }) => {
       <Welcome />
       <Posts posts={posts} />
       {/*<MyBookshelf currentlyReading={currentlyReading} />*/}
-      {/*<SideProjects />*/}
       <Contact accounts={accounts} />
     </Layout>
   );

@@ -1,6 +1,6 @@
 import Layout from "../components/Layout/Layout";
 import Post from "../components/Post/Post";
-import { Posts } from "./sections";
+import { Posts } from "../components/sections";
 
 import Introduction from "../components/Introduction/Introduction";
 

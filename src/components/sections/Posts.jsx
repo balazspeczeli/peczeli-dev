@@ -1,4 +1,4 @@
-import PostsList from "../../components/PostsList/PostsList";
+import PostsList from "../PostsList/PostsList";
 
 const Posts = ({ posts }) => (
   <section>
@@ -7,4 +7,4 @@ const Posts = ({ posts }) => (
   </section>
 );
 
-export default Posts;
+export { Posts };

@@ -1,4 +1,4 @@
-import Introduction from "../../components/Introduction/Introduction";
+import Introduction from "../Introduction/Introduction";
 
 const Welcome = () => (
   <section>
@@ -7,4 +7,4 @@ const Welcome = () => (
   </section>
 );
 
-export default Welcome;
+export { Welcome };
