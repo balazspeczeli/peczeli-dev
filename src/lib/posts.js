@@ -19,8 +19,8 @@ export const getPosts = (options = {}) => {
     if (options.pathOnly) {
       post = { path };
     } else {
-      const { title, date } = getPost(path);
-      post = { path, title, date };
+      const { title, date, category } = getPost(path);
+      post = { path, title, date, category };
     }
 
     posts.push(post);
@@ -33,21 +33,23 @@ export const getPosts = (options = {}) => {
   return posts;
 };
 
+const validateMatterResult = (matterResult, prop, postPath) => {
+  if (matterResult.data[prop] === undefined) {
+    throw new Error(`Could not find "${prop}" property in ${postPath}`);
+  }
+};
+
 export const getPost = (postPath, options = {}) => {
-  const post = {};
   const fullPath = path.join(postsDirectory, postPath + ".md");
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
 
-  if (matterResult.data.title === undefined) {
-    throw new Error(`Could not find "title" property in ${postPath}`);
-  }
-  post.title = matterResult.data.title;
+  validateMatterResult(matterResult, "title", postPath);
+  validateMatterResult(matterResult, "date", postPath);
+  validateMatterResult(matterResult, "category", postPath);
 
-  if (matterResult.data.date === undefined) {
-    throw new Error(`Could not find "date" property in ${postPath}`);
-  }
-  post.date = matterResult.data.date;
+  const { title, date, category } = matterResult.data;
+  const post = { title, date, category };
 
   if (options.includeContent) {
     post.content = md.render(matterResult.content);

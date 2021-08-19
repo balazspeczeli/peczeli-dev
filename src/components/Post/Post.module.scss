@@ -2,10 +2,8 @@
   margin-bottom: 3rem;
 }
 
-.title {
-  margin-bottom: 1rem;
-}
-
-.date {
-  color: var(--faded-text);
+.metadata {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
 }

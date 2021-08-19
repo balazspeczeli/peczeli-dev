@@ -1,0 +1,23 @@
+.component {
+  display: inline-block;
+  border-radius: 6px;
+  background-color: #999999;
+  font-size: 13px;
+  padding: 1px 5px;
+  color: #ffffff;
+
+  &.side-project {
+    background-color: #9f83d1;
+  }
+
+  &.tutorial {
+    background-color: #9bc268;
+  }
+
+  &.personal {
+    background-color: #d37c7c;
+    background-color: #dea154;
+    background-color: #e9d641;
+    background-color: #6f9ad1;
+  }
+}

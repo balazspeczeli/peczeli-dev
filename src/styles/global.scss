@@ -33,6 +33,7 @@ a {
   color: var(--link-color);
   text-decoration: none;
   position: relative;
+  overflow-wrap: break-word;
 
   &[target="_blank"] {
     margin-right: 15px;

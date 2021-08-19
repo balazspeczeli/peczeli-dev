@@ -4,23 +4,35 @@
 
 .post {
   display: flex;
+  align-items: center;
 }
 
-.date {
-  color: var(--faded-text);
+.date,
+.label {
   flex-shrink: 0;
-  width: 100px;
-  margin-right: 1.5rem;
+  margin-right: 10px;
+}
+
+.label {
+  width: 80px;
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 600px) {
   .post {
     margin-bottom: 1rem;
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .label {
+    order: 2;
+    margin: 2px 0;
   }
 
   .date {
-    order: 2;
+    order: 3;
     margin: 0;
   }
 }
