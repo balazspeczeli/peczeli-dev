@@ -1,4 +1,4 @@
-import ContactList from "../../components/ContactList/ContactList";
+import { ContactList } from "components";
 
 const Contact = ({ accounts }) => (
   <section>
@@ -7,4 +7,4 @@ const Contact = ({ accounts }) => (
   </section>
 );
 
-export { Contact };
+export default Contact;

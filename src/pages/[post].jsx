@@ -1,10 +1,6 @@
-import Layout from "../components/Layout/Layout";
-import Post from "../components/Post/Post";
-import { Posts } from "../components/sections";
-
-import Introduction from "../components/Introduction/Introduction";
-
-import { getPosts, getPost } from "../lib/posts";
+import { Layout, Post, Introduction } from "components";
+import { Posts } from "components/sections";
+import { getPosts, getPost } from "lib/posts";
 
 const PostPage = ({ posts, post }) => {
   return (

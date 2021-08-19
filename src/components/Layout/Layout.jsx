@@ -1,9 +1,9 @@
 import Head from "next/head";
-import Header from "../Header/Header";
+import { Header } from "./Header";
 
 import styles from "./Layout.module.scss";
 
-import { blogTitle } from "../../content/config.json";
+import { blogTitle } from "content/config.json";
 
 const Layout = ({ title, children }) => {
   const pageTitle = title ? `${title} | ${blogTitle}` : blogTitle;

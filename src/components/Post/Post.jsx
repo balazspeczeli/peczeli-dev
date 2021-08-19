@@ -1,5 +1,5 @@
-import Date from "./Date";
-import Label from "./Label";
+import { Date } from "./Date";
+import { Label } from "./Label";
 
 import styles from "./Post.module.scss";
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Date from "../Post/Date";
-import Label from "../Post/Label";
+import { Date } from "components/Post/Date";
+import { Label } from "components/Post/Label";
 
 import styles from "./PostsList.module.scss";
 

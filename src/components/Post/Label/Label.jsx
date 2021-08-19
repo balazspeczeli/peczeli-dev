@@ -5,4 +5,4 @@ const Label = ({ text }) => {
   return <div className={classes}>{text}</div>;
 };
 
-export { Label };
+export default Label;

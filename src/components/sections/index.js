@@ -1,4 +1,4 @@
-export { Welcome } from "./Welcome.jsx";
-export { Posts } from "./Posts.jsx";
-export { MyBookshelf } from "./MyBookshelf.jsx";
-export { Contact } from "./Contact.jsx";
+export { default as Welcome } from "./Welcome.jsx";
+export { default as Posts } from "./Posts.jsx";
+export { default as MyBookshelf } from "./MyBookshelf.jsx";
+export { default as Contact } from "./Contact.jsx";

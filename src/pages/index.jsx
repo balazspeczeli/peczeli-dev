@@ -1,10 +1,10 @@
-import Layout from "../components/Layout/Layout";
-import { Welcome, Posts, MyBookshelf, Contact } from "../components/sections";
+import { Layout } from "components";
+import { Welcome, Posts, MyBookshelf, Contact } from "components/sections";
 
-import { getPosts } from "../lib/posts";
-import { getCurrentlyReading } from "../lib/books";
+import { getPosts } from "lib/posts";
+import { getCurrentlyReading } from "lib/books";
 
-import accounts from "../content/accounts.json";
+import accounts from "content/accounts.json";
 
 const IndexPage = ({ posts, currentlyReading, accounts }) => {
   return (

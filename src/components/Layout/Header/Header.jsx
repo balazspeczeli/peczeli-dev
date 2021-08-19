@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import styles from "./Header.module.scss";
 
-import { blogTitle } from "../../content/config.json";
+import { blogTitle } from "content/config.json";
 
 const Header = () => (
   <header className={styles.component}>

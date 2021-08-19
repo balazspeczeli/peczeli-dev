@@ -1,10 +1,6 @@
 import { Fragment } from "react";
-
-import Introduction from "../components/Introduction/Introduction";
-import Book from "../components/Book/Book";
-
-import Layout from "../components/Layout/Layout";
-import { getBooks } from "../lib/books";
+import { Layout, Book, Introduction } from "components";
+import { getBooks } from "lib/books";
 
 const BookshelfPage = ({ books }) => {
   return (
