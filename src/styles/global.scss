@@ -87,7 +87,8 @@ hr {
   border-bottom: 1px solid var(--border-color);
 }
 
-p > code {
+p > code,
+ol code {
   border-radius: 5px;
   padding: 0.15rem 0.5rem;
   color: var(--code-default-color);
@@ -109,6 +110,7 @@ blockquote {
 
 img {
   &.centered {
+    width: 100%;
     max-width: 500px;
     margin: auto;
   }
