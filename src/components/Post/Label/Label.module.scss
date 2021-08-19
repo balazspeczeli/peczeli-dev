@@ -7,7 +7,7 @@
   color: #ffffff;
 
   &.side-project {
-    background-color: #9f83d1;
+    background-color: #6f9ad1;
   }
 
   &.tutorial {
@@ -15,9 +15,18 @@
   }
 
   &.personal {
-    background-color: #d37c7c;
     background-color: #dea154;
+  }
+
+  &.unknown-1 {
+    background-color: #9f83d1;
+  }
+
+  &.unknown-2 {
+    background-color: #d37c7c;
+  }
+
+  &.unknown-3 {
     background-color: #e9d641;
-    background-color: #6f9ad1;
   }
 }
