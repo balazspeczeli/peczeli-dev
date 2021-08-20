@@ -1,6 +1,7 @@
 import { Layout, Post, Introduction } from "components";
-import { Posts } from "components/sections";
+import { Posts, Contact } from "components/sections";
 import { getPosts, getPost } from "lib/posts";
+import accounts from "content/accounts.json";
 
 const PostPage = ({ posts, post }) => {
   return (
@@ -10,6 +11,7 @@ const PostPage = ({ posts, post }) => {
       <Introduction />
       <hr />
       <Posts posts={posts} />
+      <Contact accounts={accounts} />
     </Layout>
   );
 };
