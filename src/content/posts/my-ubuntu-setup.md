@@ -24,6 +24,8 @@ I use the built-in one.
 
 A powerful tool to customize the GNOME shell. The only extension I use is called Dash to panel which gives me a Windows-style taskbar.
 
+<img src="images/posts/gnome-tweak-tool-dash-to-panel.png" />
+
 ### Open Graphics Drivers
 
 <a href="https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers" target="_blank">https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers</a>
