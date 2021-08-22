@@ -6,7 +6,7 @@ import styles from "./Post.module.scss";
 const Post = ({ title, date, content, category }) => (
   <section className={styles.component}>
     <h1 className={styles.title}>{title}</h1>
-    <div class={styles.metadata}>
+    <div className={styles.metadata}>
       <Label labelId={category} />
       <Date date={date} />
     </div>
