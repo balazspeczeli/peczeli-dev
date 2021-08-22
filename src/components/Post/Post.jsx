@@ -7,7 +7,7 @@ const Post = ({ title, date, content, category }) => (
   <section className={styles.component}>
     <h1 className={styles.title}>{title}</h1>
     <div class={styles.metadata}>
-      <Label text={category} />
+      <Label labelId={category} />
       <Date date={date} />
     </div>
     <div dangerouslySetInnerHTML={{ __html: content }} />

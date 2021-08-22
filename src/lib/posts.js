@@ -33,22 +33,44 @@ export const getPosts = (options = {}) => {
   return posts;
 };
 
-const validateMatterResult = (matterResult, prop, postPath) => {
-  if (matterResult.data[prop] === undefined) {
+const validatePostMetaData = (metadata, prop, postPath) => {
+  if (metadata[prop] === undefined) {
     throw new Error(`Could not find "${prop}" property in ${postPath}`);
   }
+};
+
+const validPostCategories = {};
+const validatePostCategory = (category, postPath) => {
+  if (validPostCategories[category]) {
+    return;
+  }
+
+  const labelsPath = path.join(contentDirectory, "labels.json");
+  const fileContents = fs.readFileSync(labelsPath, "utf8");
+  const labels = JSON.parse(fileContents);
+
+  if (!labels[category]) {
+    throw new Error(
+      `Could not find "${category}" in ${labelsPath} ${postPath}`
+    );
+  }
+
+  validPostCategories[category] = true;
 };
 
 export const getPost = (postPath, options = {}) => {
   const fullPath = path.join(postsDirectory, postPath + ".md");
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
+  const { data: postMetaData } = matterResult;
 
-  validateMatterResult(matterResult, "title", postPath);
-  validateMatterResult(matterResult, "date", postPath);
-  validateMatterResult(matterResult, "category", postPath);
+  validatePostMetaData(postMetaData, "title", postPath);
+  validatePostMetaData(postMetaData, "date", postPath);
+  validatePostMetaData(postMetaData, "category", postPath);
 
-  const { title, date, category } = matterResult.data;
+  const { title, date, category } = postMetaData;
+  validatePostCategory(category, postPath);
+
   const post = { title, date, category };
 
   if (options.includeContent) {

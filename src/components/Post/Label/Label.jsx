@@ -1,7 +1,11 @@
 import styles from "./Label.module.scss";
 
-const Label = ({ text }) => {
-  const classes = `${styles.component} ${styles[text.replace(/\s+/g, "-")]}`;
+import labels from "content/labels.json";
+
+const Label = ({ labelId }) => {
+  const { text, color } = labels[labelId];
+  const classes = `${styles.component} ${styles[color]}`;
+
   return <div className={classes}>{text}</div>;
 };
 

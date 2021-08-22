@@ -12,7 +12,7 @@ const PostsList = ({ posts }) => (
           <Date date={date} />
         </div>
         <div className={styles.label}>
-          <Label text={category} />
+          <Label labelId={category} />
         </div>
         <Link href="/post" as={"/" + path}>
           {title}
