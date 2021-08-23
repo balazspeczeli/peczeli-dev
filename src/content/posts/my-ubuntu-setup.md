@@ -24,7 +24,7 @@ I use the built-in one.
 
 A powerful tool to customize the GNOME shell. The only extension I use is called Dash to panel which gives me a Windows-style taskbar.
 
-<img src="images/posts/gnome-tweak-tool-dash-to-panel.png" />
+<img src="images/posts/gnome-tweak-tool-dash-to-panel.png" class="centered"/>
 
 ### Open Graphics Drivers
 
@@ -96,7 +96,7 @@ A small utility that finds duplicate files.
 
 Scans directories and displays a nice visualization on how much disk space is consumed by each subdirectory.
 
-<img src="images/posts/disk-usage-analyzer.jpg" class="centered bordered" alt="A screenshot of Disk Usage Analyzer"/>
+<img src="images/posts/disk-usage-analyzer.jpg" alt="A screenshot of Disk Usage Analyzer" class="centered bordered max-width-500" />
 
 ## Gaming
 
@@ -106,7 +106,7 @@ Although Ubuntu might never be able to run all the games that Windows can, it ca
 
 An emulator for Super Nintendo games. Growing up I did not have a SNES console so I was very happy when I found out that there is a way to play Super Maria, Castlevania and other great SNES games on a PC.
 
-<img src="images/posts/zsnes.jpg" class="centered" alt="A screenshot of ZSNES"/>
+<img src="images/posts/zsnes.jpg" alt="A screenshot of ZSNES" class="centered max-width-500" />
 
 Completing the games are much easier because you can save the game state at any point and then continue from there when you die.
 
@@ -116,7 +116,7 @@ Completing the games are much easier because you can save the game state at any 
 
 A classic real-time strategy game. The player controls infantry, tanks, planes, and ships and can even launch nuclear missiles.
 
-<img src="images/posts/red-alert-2.jpg" alt="A screenshot of Red Alert 2" class="centered"/>
+<img src="images/posts/red-alert-2.jpg" alt="A screenshot of Red Alert 2" class="centered max-width-500"/>
 
 The game is more than 20 years old but still there's an active community around it.
 
@@ -126,4 +126,4 @@ The game is more than 20 years old but still there's an active community around 
 
 A game in which the player controls six characters in a wild west setting. I really enjoyed the cinematics and the voice acting in it.
 
-<img src="images/posts/desperados-wanted-dead-or-alive.jpg" alt="A screenshot of Desperados: Wanted Dead or Alive" class="centered"/>
+<img src="images/posts/desperados-wanted-dead-or-alive.jpg" alt="A screenshot of Desperados: Wanted Dead or Alive" class="centered max-width-500"/>

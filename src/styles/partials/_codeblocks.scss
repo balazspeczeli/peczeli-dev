@@ -1,0 +1,12 @@
+p > code,
+ol code {
+  border-radius: 5px;
+  padding: 0.15rem 0.5rem;
+  color: var(--code-default-color);
+  background-color: var(--code-bg-color);
+
+  &::selection {
+    background: #6d6d6d;
+    color: #ffffff;
+  }
+}
