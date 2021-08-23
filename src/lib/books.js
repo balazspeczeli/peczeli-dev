@@ -13,6 +13,10 @@ const coversDirectory = path.join(
 );
 
 export const getBooks = () => {
+  if (!fs.existsSync(bookshelfDirectory)) {
+    return [];
+  }
+
   const books = [];
   fs.readdirSync(bookshelfDirectory).map((file) => {
     const fullPath = path.join(bookshelfDirectory, file);
@@ -47,8 +51,11 @@ export const getBooks = () => {
 };
 
 export const getCurrentlyReading = () => {
-  const currentlyReading = [];
+  if (!fs.existsSync(bookshelfDirectory)) {
+    return [];
+  }
 
+  const currentlyReading = [];
   fs.readdirSync(bookshelfDirectory).map((file) => {
     const fullPath = path.join(bookshelfDirectory, file);
     const fileContents = fs.readFileSync(fullPath, "utf8");
