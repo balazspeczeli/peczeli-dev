@@ -7,7 +7,7 @@ category: "side-project"
 <style>
 .songs-list {
   overflow-x: auto;
-  margin: 15px auto;
+  margin: 1rem auto;
   font-size: 16px;
 }
 
@@ -342,7 +342,7 @@ Some songs quickly become very popular, others never get more than a few thousan
 <style>
 #distribution-of-views {
   font-size: 16px;
-  margin: 15px auto;
+  margin: 1rem auto;
   overflow-x: auto;
 }
 
