@@ -12,11 +12,15 @@ _Science of Stupid_ showcases accidents and provides short, but insightful scien
 
 Anyways, my favorite quotes from the show:
 
-<blockquote>Try to break the laws of science and they will break you.</blockquote>
-<blockquote>Ignoring physics is a recipe for disaster.</blockquote>
-<blockquote>If you ignore the laws of nature, they will pay you back.</blockquote>
-<blockquote>Don't just rely on blind luck, trust in science.</blockquote>
-<blockquote>Mess with science and it will mess you up.</blockquote>
+> “Try to break the laws of science and they will break you.”
+
+> “Ignoring physics is a recipe for disaster.”
+
+> “If you ignore the laws of nature, they will pay you back.”
+
+> “Don't just rely on blind luck, trust in science.”
+
+> “Mess with science and it will mess you up.”
 
 It's a really-really great show, an absolute must for any nerd!
 
