@@ -712,28 +712,8 @@ The music industry is so complex that predicting future hits is impossible, but 
 
 Has EDM already reached its peak or it will become even more popular in the coming years? Only time can tell that for sure but currently there’s no sign of any slowdown!
 
-<style>
-/* Source: https://avexdesigns.com/blog/responsive-youtube-embed */
-#when-will-the-bass-drop {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
-}
-
-#when-will-the-bass-drop iframe,
-#when-will-the-bass-drop object,
-#when-will-the-bass-drop embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-</style>
-<div id="when-will-the-bass-drop">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/XCawU6BE8P8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="responsive-youtube-embed">
+  <iframe  src="https://www.youtube.com/embed/XCawU6BE8P8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 # Update: Blogosphere coverage
