@@ -20,7 +20,7 @@ Below are some of the ideas from the series that I found particularly interestin
 
 ## Christoph Niemann (Illustration)
 
-<img src="images/posts/abstract-the-art-of-design/1-christoph-niemann-illustration.jpg" class="centered" />
+<img src="/images/posts/abstract-the-art-of-design/1-christoph-niemann-illustration.jpg" class="centered" />
 
 > “It’s not about waiting for hours for this moment where inspiration strikes. It’s just about showing up and getting started and then something amazing happens or it doesn’t happen. All that matters is you enable the chance for something to happen.”
 
@@ -32,7 +32,7 @@ Below are some of the ideas from the series that I found particularly interestin
 
 ## Tinker Hatfield (Footwear design)
 
-<img src="images/posts/abstract-the-art-of-design/2-tinker-hatfield-footwear-design.jpg" class="centered" />
+<img src="/images/posts/abstract-the-art-of-design/2-tinker-hatfield-footwear-design.jpg" class="centered" />
 
 > “I think there’s art involved in design. But to me, I don’t think of it as art. My perception of art is that it’s really the ultimate self-expression from a creative individual. For me as a designer, it is not the ultimate goal to become self-expressive. The end goal is to solve a problem for someone else, and hopefully it looks great to someone else and it’s cool to someone else.”
 
@@ -44,7 +44,7 @@ Below are some of the ideas from the series that I found particularly interestin
 
 ## Es Devlin (Stage design)
 
-<img src="images/posts/abstract-the-art-of-design/3-es-devlin-stage-design.jpg" class="centered" />
+<img src="/images/posts/abstract-the-art-of-design/3-es-devlin-stage-design.jpg" class="centered" />
 
 > “A lot of my work now is about finding environments for music.”
 
@@ -56,7 +56,7 @@ Below are some of the ideas from the series that I found particularly interestin
 
 ## Bjarke Ingels (Architecture)
 
-<img src="images/posts/abstract-the-art-of-design/4-bjarke-ingels-architecture.jpg" class="centered" />
+<img src="/images/posts/abstract-the-art-of-design/4-bjarke-ingels-architecture.jpg" class="centered" />
 
 > “When architecture is at its best, […] you’re coming up with something that is pure fiction. Then after all the hard work, all the permits, all the budgeting and all the construction, it now becomes concrete reality.”
 
@@ -68,7 +68,7 @@ Below are some of the ideas from the series that I found particularly interestin
 
 ## Ralph Gilles (Automotive design)
 
-<img src="images/posts/abstract-the-art-of-design/5-ralph-gilles-automotive-design.jpg" class="centered" />
+<img src="/images/posts/abstract-the-art-of-design/5-ralph-gilles-automotive-design.jpg" class="centered" />
 
 > “Most designs have a theme line that holds the design together. […] If you don’t get the bones right, you’re never gonna have a good design, no matter how hard you try.”
 
@@ -82,7 +82,7 @@ Below are some of the ideas from the series that I found particularly interestin
 
 ## Paula Scher (Graphic design)
 
-<img src="images/posts/abstract-the-art-of-design/6-paula-scher-graphic-design.jpg" class="centered" />
+<img src="/images/posts/abstract-the-art-of-design/6-paula-scher-graphic-design.jpg" class="centered" />
 
 > “You can create an identity for a whole place based on a recognizability of type.”
 
@@ -94,7 +94,7 @@ Below are some of the ideas from the series that I found particularly interestin
 
 ## Platon (Photography)
 
-<img src="images/posts/abstract-the-art-of-design/7-platon-photography.jpg" class="centered" />
+<img src="/images/posts/abstract-the-art-of-design/7-platon-photography.jpg" class="centered" />
 
 > “I’m not really a photographer at all. The camera is nothing more than a tool. Communication, simplicity, shapes on a page. What’s important is the story, the message, the feeling.”
 
@@ -106,7 +106,7 @@ Below are some of the ideas from the series that I found particularly interestin
 
 ## Ilse Crawford (Interior design)
 
-<img src="images/posts/abstract-the-art-of-design/8-ilse-crawford-interior-design.jpg" class="centered" />
+<img src="/images/posts/abstract-the-art-of-design/8-ilse-crawford-interior-design.jpg" class="centered" />
 
 > “Some people think interior design is a look. In fact, “It must be really fun buying furniture” is something one person said to me once. But I see it differently. We spend 87% of our lives inside buildings. How they are designed really affects how we feel, how we behave. Design is not just a visual thing.”
 

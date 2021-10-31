@@ -16,9 +16,7 @@ const PostsList = ({ posts }) => (
         <div className={styles.label}>
           <Label text={labels[category]} />
         </div>
-        <Link href="/post" as={"/" + path}>
-          {title}
-        </Link>
+        <Link href={"/posts/" + path}>{title}</Link>
       </div>
     ))}
   </div>
