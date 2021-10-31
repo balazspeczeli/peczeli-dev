@@ -4,6 +4,7 @@ import { Header } from "./Header";
 import styles from "./Layout.module.scss";
 
 import { blogTitle } from "content/config.json";
+import { HorizontalLine } from "components";
 
 const Layout = ({ title, children }) => {
   const pageTitle = title ? `${title} | ${blogTitle}` : blogTitle;
@@ -14,7 +15,7 @@ const Layout = ({ title, children }) => {
         <title>{pageTitle}</title>
       </Head>
       <Header />
-      <hr />
+      <HorizontalLine />
       <main>{children}</main>
     </div>
   );

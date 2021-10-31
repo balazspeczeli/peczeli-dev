@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Layout, Book, Introduction } from "components";
+import { Layout, Book, HorizontalLine, BackToHome } from "components";
 import { getBooks } from "lib/books";
 
 const BookshelfPage = ({ books }) => {
@@ -9,12 +9,12 @@ const BookshelfPage = ({ books }) => {
         <h2>My bookshelf</h2>
         {books.map((book) => (
           <Fragment key={book.title}>
-            <hr />
+            <HorizontalLine />
             <Book {...book} />
           </Fragment>
         ))}
-        <hr />
-        <Introduction />
+        <HorizontalLine />
+        <BackToHome />
       </div>
     </Layout>
   );

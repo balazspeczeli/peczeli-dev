@@ -1,11 +1,11 @@
-import { Layout, Post, BackToHome } from "components";
+import { Layout, Post, HorizontalLine, BackToHome } from "components";
 import { getPosts, getPost } from "lib/posts";
 
 const PostPage = ({ post }) => {
   return (
     <Layout title={post.title}>
       <Post {...post} />
-      <hr />
+      <HorizontalLine />
       <BackToHome />
     </Layout>
   );
