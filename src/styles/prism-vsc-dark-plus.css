@@ -39,6 +39,7 @@ pre[class*="language-"] {
   overflow: auto;
   background: var(--code-bg-color);
   border-radius: 5px;
+  font-size: 17px;
 }
 
 :not(pre) > code[class*="language-"] {
