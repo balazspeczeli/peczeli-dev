@@ -39,6 +39,20 @@ blockquote {
   padding: 0.5rem;
   border-left: 3px solid var(--border-color);
   background-color: var(--bg-color);
+
+  P {
+    margin: 0.5rem;
+  }
+
+  @media screen and (max-width: 720px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 /* Source: https://avexdesigns.com/blog/responsive-youtube-embed */
