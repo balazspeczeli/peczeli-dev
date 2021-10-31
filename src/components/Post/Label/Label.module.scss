@@ -1,32 +1,8 @@
 .component {
   display: inline-block;
   border-radius: 6px;
-  background-color: #999999;
+  background-color: #efefef;
   font-size: 13px;
   padding: 1px 5px;
-  color: #ffffff;
-
-  &.blue {
-    background-color: #6f9ad1;
-  }
-
-  &.green {
-    background-color: #9bc268;
-  }
-
-  &.orange {
-    background-color: #dea154;
-  }
-
-  &.purple {
-    background-color: #9f83d1;
-  }
-
-  &.red {
-    background-color: #d37c7c;
-  }
-
-  &.yellow {
-    background-color: #e9d641;
-  }
+  color: #6e6e6e;
 }

@@ -1,22 +1,7 @@
 {
-  "side-project": {
-    "text": "Side project",
-    "color": "blue"
-  },
-  "tutorial": {
-    "text": "Tutorial",
-    "color": "green"
-  },
-  "personal": {
-    "text": "Personal",
-    "color": "orange"
-  },
-  "opinion": {
-    "text": "Opinion",
-    "color": "purple"
-  },
-  "review": {
-    "text": "Review",
-    "color": "red"
-  }
+  "side-project": "Side project",
+  "tutorial": "Tutorial",
+  "personal": "Personal",
+  "opinion": "Opinion",
+  "review": "Review"
 }
