@@ -1,17 +1,12 @@
-import { Layout, Post, Introduction } from "components";
-import { Posts, Contact } from "components/sections";
+import { Layout, Post, BackToHome } from "components";
 import { getPosts, getPost } from "lib/posts";
-import accounts from "content/accounts.json";
 
-const PostPage = ({ posts, post }) => {
+const PostPage = ({ post }) => {
   return (
     <Layout title={post.title}>
       <Post {...post} />
       <hr />
-      <Introduction />
-      <hr />
-      <Posts posts={posts} />
-      <Contact accounts={accounts} />
+      <BackToHome />
     </Layout>
   );
 };
@@ -30,12 +25,10 @@ export const getStaticPaths = () => {
 };
 
 export const getStaticProps = async (context) => {
-  const posts = getPosts();
   const post = getPost(context.params.post, { includeContent: true });
 
   return {
     props: {
-      posts,
       post,
     },
   };

@@ -1,3 +1,4 @@
+export { BackToHome } from "./BackToHome";
 export { Book } from "./Book";
 export { ContactList } from "./ContactList";
 export { Introduction } from "./Introduction";
