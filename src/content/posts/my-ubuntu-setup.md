@@ -112,36 +112,3 @@ Scans directories and displays a nice visualization on how much disk space is co
 <img src="/images/posts/my-ubuntu-setup/disk-usage-analyzer.jpg" alt="A screenshot of Disk Usage Analyzer" class="centered bordered max-width-500" />
 
 <a href="https://wiki.gnome.org/action/show/Apps/DiskUsageAnalyzer" target="_blank">https://wiki.gnome.org/action/show/Apps/DiskUsageAnalyzer</a>
-
-## Gaming
-
-Although Ubuntu might never be able to run all the games that Windows can, it can run a surprisingly large number of games from the 2000s and 2010s era.
-
-### C&C: Red Alert 2
-
-A classic real-time strategy game. The player controls infantry, tanks, planes, and ships and can even launch nuclear missiles.
-
-<img src="/images/posts/my-ubuntu-setup/red-alert-2.jpg" alt="A screenshot of Red Alert 2" class="centered max-width-500"/>
-
-The game is more than 20 years old but still there's an active community around it.
-
-<a href="https://snapcraft.io/install/cncra2yr/ubuntu" target="_blank">https://snapcraft.io/install/cncra2yr/ubuntu</a>
-
-### Desperados: Wanted Dead or Alive
-
-A game in which the player controls six characters in a wild west setting. I really enjoyed the cinematics and the voice acting in it.
-
-<img src="/images/posts/my-ubuntu-setup/desperados-wanted-dead-or-alive.jpg" alt="A screenshot of Desperados: Wanted Dead or Alive" class="centered max-width-500"/>
-
-<a href="https://www.dotslashplay.it/fr/games/desperados" target="_blank">https://www.dotslashplay.it/fr/games/desperados</a>
-
-### ZSNES
-
-An emulator for Super Nintendo games. Growing up I did not have a SNES console so I was very happy when I found out that there is a way to play Super Maria, Castlevania and other great SNES games on a PC.
-
-<img src="/images/posts/my-ubuntu-setup/zsnes.jpg" alt="A screenshot of ZSNES" class="centered max-width-500" />
-
-Completing the games are much easier because you can save the game state at any point and then continue from there when you die.
-
-<a href="https://www.zsnes.com" target="_blank">https://www.zsnes.com</a><br/>
-<a href="https://help.ubuntu.com/community/Zsnes" target="_blank">https://help.ubuntu.com/community/Zsnes</a>
