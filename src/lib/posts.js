@@ -71,7 +71,7 @@ export const getPost = (postPath, options = {}) => {
   const { title, date, category } = postMetaData;
   validatePostCategory(category, postPath);
 
-  const post = { title, date, category };
+  const post = { path: postPath, title, date, category };
 
   if (options.includeContent) {
     post.content = md.render(matterResult.content);
