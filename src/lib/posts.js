@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { compareDesc } from "date-fns";
-import md from "./md";
+import { md } from "./md";
 
 const contentDirectory = path.join(process.cwd(), "src", "content");
 const postsDirectory = path.join(contentDirectory, "posts");
