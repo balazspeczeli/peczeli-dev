@@ -1,1 +1,1 @@
-export { default as Date } from "./Date.jsx";
+export { Date } from "./Date.jsx";

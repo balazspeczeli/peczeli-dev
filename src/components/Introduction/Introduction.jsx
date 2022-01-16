@@ -1,6 +1,6 @@
 import styles from "./Introduction.module.scss";
 
-const Introduction = () => (
+export const Introduction = () => (
   <div className={styles.component}>
     <div className={styles.photo}></div>
     <div>
@@ -9,5 +9,3 @@ const Introduction = () => (
     </div>
   </div>
 );
-
-export default Introduction;

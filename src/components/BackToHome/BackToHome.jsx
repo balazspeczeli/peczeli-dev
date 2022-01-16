@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const BackToHome = () => {
+export const BackToHome = () => {
   return (
     <div>
       <Link href="/">
@@ -9,5 +9,3 @@ const BackToHome = () => {
     </div>
   );
 };
-
-export default BackToHome;

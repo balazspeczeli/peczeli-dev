@@ -1,1 +1,1 @@
-export { default as BackToHome } from "./BackToHome.jsx";
+export { BackToHome } from "./BackToHome.jsx";

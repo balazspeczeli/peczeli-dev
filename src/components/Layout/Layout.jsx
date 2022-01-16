@@ -6,7 +6,7 @@ import styles from "./Layout.module.scss";
 import { blogTitle } from "content/config.json";
 import { HorizontalLine } from "components";
 
-const Layout = ({ title, children }) => {
+export const Layout = ({ title, children }) => {
   const pageTitle = title ? `${title} | ${blogTitle}` : blogTitle;
 
   return (
@@ -20,5 +20,3 @@ const Layout = ({ title, children }) => {
     </div>
   );
 };
-
-export default Layout;

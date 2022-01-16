@@ -5,7 +5,7 @@ import styles from "./Post.module.scss";
 
 import labels from "content/labels.json";
 
-const Post = ({ title, date, content, category }) => (
+export const Post = ({ title, date, content, category }) => (
   <section className={styles.component}>
     <h1 className={styles.title}>{title}</h1>
     <div className={styles.metadata}>
@@ -15,5 +15,3 @@ const Post = ({ title, date, content, category }) => (
     <div dangerouslySetInnerHTML={{ __html: content }} />
   </section>
 );
-
-export default Post;

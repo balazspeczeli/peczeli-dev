@@ -1,7 +1,5 @@
 import styles from "./HorizontalLine.module.scss";
 
-const HorizontalLine = () => {
+export const HorizontalLine = () => {
   return <hr className={styles.component} />;
 };
-
-export default HorizontalLine;

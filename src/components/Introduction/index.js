@@ -1,1 +1,1 @@
-export { default as Introduction } from "./Introduction.jsx";
+export { Introduction } from "./Introduction.jsx";

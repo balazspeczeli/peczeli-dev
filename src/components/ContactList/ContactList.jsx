@@ -1,6 +1,6 @@
 import styles from "./ContactList.module.scss";
 
-const ContactList = ({ accounts }) => (
+export const ContactList = ({ accounts }) => (
   <div className={styles.component}>
     {accounts.map(({ text, href, icon }) => (
       <div key={text} className={styles.account}>
@@ -16,5 +16,3 @@ const ContactList = ({ accounts }) => (
     ))}
   </div>
 );
-
-export default ContactList;

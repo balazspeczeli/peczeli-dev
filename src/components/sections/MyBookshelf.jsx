@@ -17,7 +17,7 @@ const CurrentlyReading = (currentlyReading) => {
   );
 };
 
-const MyBookshelf = ({ currentlyReading }) => (
+export const MyBookshelf = ({ currentlyReading }) => (
   <section>
     <h2>My bookshelf</h2>
     <CurrentlyReading currentlyReading={currentlyReading} />
@@ -26,5 +26,3 @@ const MyBookshelf = ({ currentlyReading }) => (
     </p>
   </section>
 );
-
-export default MyBookshelf;

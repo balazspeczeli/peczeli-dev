@@ -1,1 +1,1 @@
-export { default as HorizontalLine } from "./HorizontalLine.jsx";
+export { HorizontalLine } from "./HorizontalLine.jsx";

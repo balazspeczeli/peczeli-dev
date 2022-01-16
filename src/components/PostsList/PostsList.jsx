@@ -6,7 +6,7 @@ import styles from "./PostsList.module.scss";
 
 import labels from "content/labels.json";
 
-const PostsList = ({ posts }) => (
+export const PostsList = ({ posts }) => (
   <div className={styles.component}>
     {posts.map(({ path, title, date, category }) => (
       <div className={styles.post} key={path}>
@@ -21,5 +21,3 @@ const PostsList = ({ posts }) => (
     ))}
   </div>
 );
-
-export default PostsList;

@@ -1,6 +1,6 @@
 import styles from "./Book.module.scss";
 
-const Book = ({ title, author, year, cover, description }) => (
+export const Book = ({ title, author, year, cover, description }) => (
   <div className={styles.component}>
     <div className={styles.description}>
       <h3 className={styles.title}>
@@ -15,5 +15,3 @@ const Book = ({ title, author, year, cover, description }) => (
     />
   </div>
 );
-
-export default Book;
