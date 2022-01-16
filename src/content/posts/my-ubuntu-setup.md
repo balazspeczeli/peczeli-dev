@@ -97,6 +97,15 @@ I use youtube-dl for downloading videos from YouTube so I can watch them later o
 
 <a href="https://github.com/ytdl-org/youtube-dl" target="_blank">https://github.com/ytdl-org/youtube-dl</a>
 
+### HEIF support
+
+<a href="https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format" target="_blank">HEIF</a> is a file format used by iOS and Android devices for saving photos. These packages enable the standard Image Viewer to open such files and Nautilus to show thumbnails for them.
+
+```shell
+$ sudo apt update
+$ sudo apt install heif-gdk-pixbuf heif-thumbnailer libheif1
+```
+
 ## Other tools
 
 ### FSlint
