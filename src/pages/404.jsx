@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-export default function Custom404() {
+const Custom404 = () => {
   const router = useRouter();
 
   useEffect(() => {
@@ -9,4 +9,6 @@ export default function Custom404() {
   });
 
   return null;
-}
+};
+
+export default Custom404;
