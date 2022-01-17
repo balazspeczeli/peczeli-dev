@@ -58,7 +58,7 @@ link.remove();
 
 And that's it!
 
-I haven't tested this approach with files larger than a megabyte because the project did not require it but if the conversion takes too long, we nned to move the function to a Service Worker and display some feedback to the user.
+I haven't tested this approach with files larger than a megabyte because the project did not require it but if the conversion takes too long, we need move the function to a Service Worker and display some feedback to the user.
 
 ## Full solution
 
