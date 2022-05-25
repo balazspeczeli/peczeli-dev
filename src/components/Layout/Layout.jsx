@@ -3,11 +3,17 @@ import { Header } from "./Header";
 
 import styles from "./Layout.module.scss";
 
-import { blogTitle } from "content/config.json";
+import config from "content/config.json";
 import { HorizontalLine } from "components";
 
 export const Layout = ({ title, children }) => {
-  const pageTitle = title ? `${title} | ${blogTitle}` : blogTitle;
+  let pageTitle;
+
+  if (title) {
+    pageTitle = `${title} | ${config.blogTitle}`;
+  } else {
+    pageTitle = config.blogTitle;
+  }
 
   return (
     <div className={styles.component}>
