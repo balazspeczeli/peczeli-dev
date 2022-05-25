@@ -83,9 +83,17 @@ Lightweight and easy to use. Perfect for editing audio files, might not be the b
 
 ### imagemagick
 
-A command line tool for manipulating images. It has many features, I mostly use it for resizing, cropping, and compressing images combined with BASH scripts.
+A command line tool for manipulating images. It has many features, I mostly use it for resizing, cropping, and compressing images.
 
 <a href="https://imagemagick.org/" target="_blank">https://imagemagick.org/</a>
+
+#### Convert all `png` files in current directory to `jpg`s
+
+```shell
+for file in *.png; do convert $file ${file/%.png/.jpg}; done
+```
+
+The `convert` command is part of the `imagemagick` package.
 
 ### Screenshot tool
 
@@ -106,13 +114,23 @@ $ sudo apt update
 $ sudo apt install heif-gdk-pixbuf heif-thumbnailer libheif1
 ```
 
+#### Convert all HEIF images in current directory to a different image format
+
+When it is not possible to upgrade an environment, one can use `heif-convert` to convert HEIF images to, for example, jpgs:
+
+```shell
+for file in \*.heic; do heif-convert $file ${file/%.heic/.jpg}; done
+```
+
+Manual for `heif-convert`: <a href="https://manpages.debian.org/testing/libheif-examples/heif-convert.1.en.html" target="_blank">https://manpages.debian.org/testing/libheif-examples/heif-convert.1.en.html</a>
+
 ## Other tools
 
-### FSlint
+### dupeGuru
 
-A small utility that finds duplicate files.
+A small utility to find duplicate files.
 
-<a href="http://www.pixelbeat.org/fslint/" target="_blank">http://www.pixelbeat.org/fslint/</a>
+<a href="https://dupeguru.voltaicideas.net/" target="_blank">https://dupeguru.voltaicideas.net/</a>
 
 ### Disk Usage Analyzer
 
