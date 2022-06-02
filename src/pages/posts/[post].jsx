@@ -1,17 +1,31 @@
-import { Layout, Post, HorizontalLine, PostsList } from "components";
+import {
+  BackToHome,
+  Layout,
+  Post,
+  HorizontalLine,
+  PostsList,
+} from "components";
 import { getPosts, getPost } from "lib/posts";
 
-const PostPage = ({ post, posts }) => {
-  const filtered = posts.filter((p) => p.path !== post.path);
+const OtherPosts = ({ posts }) => {
+  return (
+    <section style={{ marginBottom: "25px" }}>
+      <h2>Other posts</h2>
+      <PostsList posts={posts} />
+    </section>
+  );
+};
+
+const PostPage = ({ currentPost, allPosts }) => {
+  const otherPosts = allPosts.filter((post) => post.path !== currentPost.path);
 
   return (
-    <Layout title={post.title}>
-      <Post {...post} />
+    <Layout title={currentPost.title}>
+      <Post {...currentPost} />
       <HorizontalLine />
-      <section>
-        <h2>Other posts</h2>
-        <PostsList posts={filtered} />
-      </section>
+      <OtherPosts posts={otherPosts} />
+      <HorizontalLine />
+      <BackToHome />
     </Layout>
   );
 };
@@ -30,13 +44,13 @@ export const getStaticPaths = () => {
 };
 
 export const getStaticProps = async (context) => {
-  const post = getPost(context.params.post, { includeContent: true });
-  const posts = getPosts();
+  const currentPost = getPost(context.params.post, { includeContent: true });
+  const allPosts = getPosts();
 
   return {
     props: {
-      post,
-      posts,
+      currentPost,
+      allPosts,
     },
   };
 };
