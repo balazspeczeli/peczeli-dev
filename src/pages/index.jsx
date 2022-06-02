@@ -1,5 +1,5 @@
-import { Layout } from "components";
-import { Welcome, Posts, Contact } from "components/sections";
+import { HorizontalLine, Layout } from "components";
+import { Welcome, LatestPosts, Contact } from "components/sections";
 
 import { getPosts } from "lib/posts";
 
@@ -9,8 +9,9 @@ const IndexPage = ({ posts, accounts }) => {
   return (
     <Layout>
       <Welcome />
-      <Posts posts={posts} />
+      <LatestPosts posts={posts} limit={5} />
       <Contact accounts={accounts} />
+      <HorizontalLine />
     </Layout>
   );
 };
