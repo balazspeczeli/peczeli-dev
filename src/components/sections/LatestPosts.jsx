@@ -11,7 +11,7 @@ export const LatestPosts = ({ posts, limit }) => {
       {rest > 0 && (
         <p>
           <Link href="/posts">
-            <a>See all of my posts ({rest} more)&rarr;</a>
+            <a>See all of my posts ({rest} more) &rarr;</a>
           </Link>
         </p>
       )}
