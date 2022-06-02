@@ -1,21 +1,5 @@
 import Link from "next/link";
-
-const CurrentlyReading = (currentlyReading) => {
-  if (currentlyReading.length === 0) {
-    return null;
-  }
-
-  return (
-    <>
-      <p>Currently reading: </p>
-      <ul>
-        {currentlyReading.map((title) => (
-          <li key={title}>{title}</li>
-        ))}
-      </ul>
-    </>
-  );
-};
+import { CurrentlyReading } from "components";
 
 export const MyBookshelf = ({ currentlyReading }) => (
   <section>
