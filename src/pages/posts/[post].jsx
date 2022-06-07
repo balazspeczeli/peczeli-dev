@@ -7,14 +7,12 @@ import {
 } from "components";
 import { getPosts, getPost } from "lib/posts";
 
-const OtherPosts = ({ posts }) => {
-  return (
-    <section style={{ marginBottom: "25px" }}>
-      <h2>Other posts</h2>
-      <PostsList posts={posts} />
-    </section>
-  );
-};
+const OtherPosts = ({ posts }) => (
+  <section className="mb-15">
+    <h2>Other posts</h2>
+    <PostsList posts={posts} />
+  </section>
+);
 
 const PostPage = ({ currentPost, allPosts }) => {
   const otherPosts = allPosts.filter((post) => post.path !== currentPost.path);

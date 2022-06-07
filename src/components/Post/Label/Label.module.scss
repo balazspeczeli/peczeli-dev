@@ -1,8 +1,8 @@
 .component {
   display: inline-block;
   border-radius: 6px;
-  background-color: #efefef;
-  font-size: 13px;
+  background-color: var(--label-bg-color);
+  font-size: 0.8rem;
   padding: 1px 5px;
-  color: #6e6e6e;
+  color: var(--label-text-color);
 }

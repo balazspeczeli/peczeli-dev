@@ -11,7 +11,11 @@
   --border-color: #c7c7c7;
   --bg-color: #f9f9f9;
   --code-default-color: #d4d4d4;
+  --code-selection-color: #eeeeee;
   --code-bg-color: #1e1e1e;
+  --code-selection-bg-color: #6d6d6d;
+  --label-text-color: #6e6e6e;
+  --label-bg-color: #efefef;
 }
 
 body {
@@ -19,7 +23,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: var(--normal-text);
   overflow-y: scroll;
 }
@@ -40,7 +44,7 @@ blockquote {
   border-left: 3px solid var(--border-color);
   background-color: var(--bg-color);
 
-  P {
+  p {
     margin: 0.5rem;
   }
 
@@ -53,6 +57,10 @@ blockquote {
     margin-left: 0;
     margin-right: 0;
   }
+}
+
+.mb-15 {
+  margin-bottom: 1.5rem;
 }
 
 /* Source: https://avexdesigns.com/blog/responsive-youtube-embed */
