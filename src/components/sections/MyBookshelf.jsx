@@ -6,7 +6,7 @@ export const MyBookshelf = ({ currentlyReading }) => (
     <h2>My bookshelf</h2>
     <CurrentlyReading currentlyReading={currentlyReading} />
     <p>
-      <Link href="/bookshelf">Check out my book reviews &rarr;</Link>
+      <Link href="/my-bookshelf">Check out my book reviews &rarr;</Link>
     </p>
   </section>
 );

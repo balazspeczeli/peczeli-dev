@@ -18,19 +18,28 @@ export const getBooks = () => {
   }
 
   const books = [];
-  fs.readdirSync(bookshelfDirectory).map((file) => {
-    const fullPath = path.join(bookshelfDirectory, file);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
+  const files = fs
+    .readdirSync(bookshelfDirectory)
+    .map((fileName) => {
+      const fullPath = path.join(bookshelfDirectory, fileName);
+      const timeCreated = fs.statSync(fullPath).birthtime.getTime();
+      return { fullPath, timeCreated };
+    })
+    .sort((a, b) => b.timeCreated - a.timeCreated)
+    .map((file) => file.fullPath);
+
+  files.map((filePath) => {
+    const fileContents = fs.readFileSync(filePath, "utf8");
     const matterResult = matter(fileContents);
 
-    const requiredKeys = ["title", "author", "year"];
+    const requiredKeys = ["title", "author", "yearOfPublication"];
     for (const key of requiredKeys) {
       if (!matterResult.data[key]) {
-        throw new Error(`Could not find "${key}" in ${file}`);
+        throw new Error(`Could not find "${key}" in ${filePath}`);
       }
     }
 
-    const coverImage = `${path.parse(file).name}.jpg`;
+    const coverImage = `${path.parse(filePath).name}.jpg`;
     const coverImagePath = path.join(coversDirectory, coverImage);
     if (!fs.existsSync(coverImagePath)) {
       throw new Error(`Could not find ${coverImagePath}`);
@@ -41,8 +50,9 @@ export const getBooks = () => {
         title: matterResult.data.title,
         author: matterResult.data.author,
         cover: `/images/bookshelf/${coverImage}`,
+        yearOfPublication: matterResult.data.yearOfPublication,
+        lang: matterResult.data.lang ? matterResult.data.lang : "en",
         description: md.render(matterResult.content),
-        year: matterResult.data.year,
       });
     }
   });
@@ -61,7 +71,11 @@ export const getCurrentlyReading = () => {
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const matterResult = matter(fileContents);
     if (matterResult.data.draft) {
-      currentlyReading.push(matterResult.data.title);
+      currentlyReading.push({
+        title: matterResult.data.title,
+        author: matterResult.data.author,
+        lang: matterResult.data.lang ? matterResult.data.lang : "en",
+      });
     }
   });
 

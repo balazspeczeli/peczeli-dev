@@ -1,23 +1,31 @@
 .component {
   display: flex;
-  padding: 25px 0;
+  align-items: flex-start;
+  margin-top: 25px;
 }
 
-.description {
-  width: 100%;
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.35;
+}
 
-  .title {
-    margin-top: 0;
-  }
-
-  .year {
-    color: var(--faded-text);
-  }
+.author {
+  color: var(--faded-text);
 }
 
 .cover {
-  width: 150px;
-  align-self: start;
-  margin-left: 5px;
+  width: 80px;
   border: 1px solid var(--border-color);
+}
+
+@media screen and (max-width: 600px) {
+  .component {
+    flex-direction: column-reverse;
+    margin-top: 0;
+  }
+
+  .cover {
+    margin: 1rem auto;
+  }
 }

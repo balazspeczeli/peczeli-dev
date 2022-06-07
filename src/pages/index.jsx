@@ -1,15 +1,22 @@
 import { HorizontalLine, Layout } from "components";
-import { Welcome, LatestPosts, Contact } from "components/sections";
+import {
+  Welcome,
+  LatestPosts,
+  Contact,
+  MyBookshelf,
+} from "components/sections";
 
 import { getPosts } from "lib/posts";
 
 import accounts from "content/accounts.json";
+import { getCurrentlyReading } from "lib/books";
 
-const IndexPage = ({ posts, accounts }) => {
+const IndexPage = ({ posts, currentlyReading, accounts }) => {
   return (
     <Layout>
       <Welcome />
       <LatestPosts posts={posts} limit={5} />
+      <MyBookshelf currentlyReading={currentlyReading} />
       <Contact accounts={accounts} />
       <HorizontalLine />
     </Layout>
@@ -18,10 +25,12 @@ const IndexPage = ({ posts, accounts }) => {
 
 export async function getStaticProps() {
   const posts = getPosts();
+  const currentlyReading = getCurrentlyReading();
 
   return {
     props: {
       posts,
+      currentlyReading,
       accounts,
     },
   };
