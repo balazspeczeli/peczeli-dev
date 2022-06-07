@@ -1,16 +1,15 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { md } from "./md";
+import { bookshelfDirectory, bookCoversDirectory } from "./paths";
+import { md, validateMetaData } from "./utils";
 
-const contentDirectory = path.join(process.cwd(), "src", "content");
-const bookshelfDirectory = path.join(contentDirectory, "bookshelf");
-const coversDirectory = path.join(
-  process.cwd(),
-  "public",
-  "images",
-  "bookshelf"
-);
+const validateCoverImage = (coverImage) => {
+  const coverImagePath = path.join(bookCoversDirectory, coverImage);
+  if (!fs.existsSync(coverImagePath)) {
+    throw new Error(`Could not find ${coverImagePath}`);
+  }
+};
 
 export const getBooks = () => {
   if (!fs.existsSync(bookshelfDirectory)) {
@@ -32,26 +31,22 @@ export const getBooks = () => {
     const fileContents = fs.readFileSync(filePath, "utf8");
     const matterResult = matter(fileContents);
 
-    const requiredKeys = ["title", "author", "yearOfPublication"];
-    for (const key of requiredKeys) {
-      if (!matterResult.data[key]) {
-        throw new Error(`Could not find "${key}" in ${filePath}`);
-      }
-    }
+    validateMetaData(matterResult.data, "title", filePath);
+    validateMetaData(matterResult.data, "author", filePath);
+    validateMetaData(matterResult.data, "yearOfPublication", filePath);
 
     const coverImage = `${path.parse(filePath).name}.jpg`;
-    const coverImagePath = path.join(coversDirectory, coverImage);
-    if (!fs.existsSync(coverImagePath)) {
-      throw new Error(`Could not find ${coverImagePath}`);
-    }
+    validateCoverImage(coverImage);
 
-    if (!matterResult.data.draft) {
+    const { draft, title, author, yearOfPublication, lang } = matterResult.data;
+
+    if (!draft) {
       books.push({
-        title: matterResult.data.title,
-        author: matterResult.data.author,
+        title,
+        author,
+        yearOfPublication,
         cover: `/images/bookshelf/${coverImage}`,
-        yearOfPublication: matterResult.data.yearOfPublication,
-        lang: matterResult.data.lang ? matterResult.data.lang : "en",
+        lang: lang ? lang : "en",
         description: md.render(matterResult.content),
       });
     }

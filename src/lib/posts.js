@@ -2,10 +2,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { compareDesc } from "date-fns";
-import { md } from "./md";
 
-const contentDirectory = path.join(process.cwd(), "src", "content");
-const postsDirectory = path.join(contentDirectory, "posts");
+import { postsDirectory, contentDirectory } from "./paths";
+import { md, validateMetaData } from "./utils";
 
 export const getPosts = (options = {}) => {
   const posts = [];
@@ -33,14 +32,8 @@ export const getPosts = (options = {}) => {
   return posts;
 };
 
-const validatePostMetaData = (metadata, prop, postPath) => {
-  if (metadata[prop] === undefined) {
-    throw new Error(`Could not find "${prop}" property in ${postPath}`);
-  }
-};
-
 const validPostCategories = {};
-const validatePostCategory = (category, postPath) => {
+const validatePostCategory = (category, fullPath) => {
   if (validPostCategories[category]) {
     return;
   }
@@ -51,27 +44,26 @@ const validatePostCategory = (category, postPath) => {
 
   if (!labels[category]) {
     throw new Error(
-      `Could not find "${category}" in ${labelsPath} ${postPath}`
+      `Could not find "${category}" in ${labelsPath} for ${fullPath}`
     );
   }
 
   validPostCategories[category] = true;
 };
 
-export const getPost = (postPath, options = {}) => {
-  const fullPath = path.join(postsDirectory, postPath + ".md");
+export const getPost = (postId, options = {}) => {
+  const fullPath = path.join(postsDirectory, postId + ".md");
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
-  const { data: postMetaData } = matterResult;
 
-  validatePostMetaData(postMetaData, "title", postPath);
-  validatePostMetaData(postMetaData, "date", postPath);
-  validatePostMetaData(postMetaData, "category", postPath);
+  validateMetaData(matterResult.data, "title", fullPath);
+  validateMetaData(matterResult.data, "date", fullPath);
+  validateMetaData(matterResult.data, "category", fullPath);
 
-  const { title, date, category } = postMetaData;
-  validatePostCategory(category, postPath);
+  const { title, date, category } = matterResult.data;
+  validatePostCategory(category, fullPath);
 
-  const post = { path: postPath, title, date, category };
+  const post = { path: fullPath, title, date, category };
 
   if (options.includeContent) {
     post.content = md.render(matterResult.content);
