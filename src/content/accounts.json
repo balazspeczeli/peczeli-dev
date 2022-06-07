@@ -1,17 +1,17 @@
-[
-  {
+{
+  "email": {
     "text": "balazspeczeli87@gmail.com",
     "href": "mailto:balazspeczeli87@gmail.com",
     "icon": "envelope"
   },
-  {
+  "linkedin": {
     "text": "linkedin.com/in/balazs-peczeli",
     "href": "https://www.linkedin.com/in/balazs-peczeli/",
     "icon": "linkedin"
   },
-  {
+  "github": {
     "text": "github.com/balazspeczeli",
     "href": "https://github.com/balazspeczeli",
     "icon": "github"
   }
-]
+}
