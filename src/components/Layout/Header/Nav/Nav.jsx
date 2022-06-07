@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
+
+import styles from "./Nav.module.scss";
 
 const NavItem = ({ text, href }) => {
   const [isActive, setIsActive] = useState(false);
