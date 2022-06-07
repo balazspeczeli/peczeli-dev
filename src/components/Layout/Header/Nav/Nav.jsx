@@ -16,7 +16,7 @@ const NavItem = ({ text, href }) => {
 
   return (
     <Link href={href}>
-      <a className={isActive && styles.active}>{text}</a>
+      <a className={isActive ? styles.active : undefined}>{text}</a>
     </Link>
   );
 };
