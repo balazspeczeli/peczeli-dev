@@ -2,7 +2,13 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { bookshelfDirectory, bookCoversDirectory } from "./paths";
-import { md, validateMetaData } from "./utils";
+import {
+  isMarkdownFile,
+  md,
+  validateMetaData,
+  validateCategory,
+} from "./utils";
+import categories from "content/bookshelf/categories.json";
 
 const validateCoverImage = (coverImage) => {
   const coverImagePath = path.join(bookCoversDirectory, coverImage);
@@ -18,6 +24,7 @@ const getBooks = (options = {}) => {
 
   return fs
     .readdirSync(bookshelfDirectory)
+    .filter(isMarkdownFile)
     .map((fileName) => {
       const fullPath = path.join(bookshelfDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -27,11 +34,14 @@ const getBooks = (options = {}) => {
       validateMetaData(matterResult.data, "title", fullPath);
       validateMetaData(matterResult.data, "author", fullPath);
       validateMetaData(matterResult.data, "yearOfPublication", fullPath);
+      validateMetaData(matterResult.data, "category", fullPath);
 
       const coverImage = `${path.parse(fullPath).name}.jpg`;
       validateCoverImage(coverImage);
 
-      const { currentlyReading, title, author, lang } = matterResult.data;
+      const { currentlyReading, title, author, lang, category } =
+        matterResult.data;
+      validateCategory(categories, category, fullPath);
 
       const book = {
         title,
@@ -47,6 +57,7 @@ const getBooks = (options = {}) => {
 
       return {
         ...book,
+        category,
         cover: `/images/bookshelf/${coverImage}`,
         description: md.render(matterResult.content),
       };
@@ -60,4 +71,16 @@ export const getBooksRead = () => {
 
 export const getCurrentlyReading = () => {
   return getBooks({ compact: true }).filter((book) => book.currentlyReading);
+};
+
+export const groupBooksByCategory = (books) => {
+  const booksByCategory = {};
+  books.forEach((b) => {
+    const { category, ...book } = b;
+    if (!booksByCategory[category]) {
+      booksByCategory[category] = [];
+    }
+    booksByCategory[category].push(book);
+  });
+  return booksByCategory;
 };

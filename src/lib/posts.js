@@ -3,17 +3,13 @@ import path from "path";
 import matter from "gray-matter";
 import { compareDesc } from "date-fns";
 import { postsDirectory } from "./paths";
-import { md, validateMetaData } from "./utils";
+import {
+  isMarkdownFile,
+  md,
+  validateMetaData,
+  validateCategory,
+} from "./utils";
 import categories from "content/posts/categories.json";
-
-const validatePostCategory = (category, fullPath) => {
-  if (!categories[category]) {
-    const categoriesPath = path.join(postsDirectory, "categories.json");
-    throw new Error(
-      `Could not find "${category}" in ${categoriesPath} for ${fullPath}`
-    );
-  }
-};
 
 export const getPost = (postId, options = {}) => {
   const fullPath = path.join(postsDirectory, postId + ".md");
@@ -25,7 +21,7 @@ export const getPost = (postId, options = {}) => {
   validateMetaData(matterResult.data, "category", fullPath);
 
   const { title, date, category } = matterResult.data;
-  validatePostCategory(category, fullPath);
+  validateCategory(categories, category, fullPath);
 
   const post = { path: fullPath, title, date, category };
 
@@ -39,7 +35,7 @@ export const getPost = (postId, options = {}) => {
 export const getPosts = (options = {}) => {
   return fs
     .readdirSync(postsDirectory)
-    .filter((file) => path.parse(file).ext == ".md")
+    .filter(isMarkdownFile)
     .map((file) => {
       const postId = path.parse(file).name;
 

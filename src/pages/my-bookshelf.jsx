@@ -1,8 +1,29 @@
 import { Fragment } from "react";
 import { BackToHome, Book, HorizontalLine, Icon, Layout } from "components";
-import { getBooksRead } from "lib/books";
+import { getBooksRead, groupBooksByCategory } from "lib/books";
+import categories from "content/bookshelf/categories.json";
 
-const BookshelfPage = ({ books }) => {
+const CategoryNavigation = ({ bookCategories }) => {
+  if (bookCategories.length == 1) {
+    return null;
+  }
+
+  return (
+    <>
+      Categories:{" "}
+      {bookCategories.map((c, i) => (
+        <Fragment key={c}>
+          <a href={"#" + c}>{categories[c]}</a>
+          {i < bookCategories.length - 1 ? ", " : "."}
+        </Fragment>
+      ))}
+    </>
+  );
+};
+
+const BookshelfPage = ({ booksByCategory }) => {
+  const bookCategories = Object.keys(booksByCategory).sort();
+
   return (
     <Layout title="My bookshelf">
       <>
@@ -22,10 +43,16 @@ const BookshelfPage = ({ books }) => {
           the book is written in Hungarian or that I have read a Hungarian
           translation.
         </p>
-        {books.map((book) => (
-          <Fragment key={book.title}>
-            <HorizontalLine />
-            <Book {...book} />
+        <CategoryNavigation bookCategories={bookCategories} />
+        {bookCategories.map((category) => (
+          <Fragment key={category}>
+            <h3 id={category}>{categories[category]}</h3>
+            {booksByCategory[category].map((book) => (
+              <Fragment key={book.title}>
+                <HorizontalLine />
+                <Book {...book} />
+              </Fragment>
+            ))}
           </Fragment>
         ))}
         <HorizontalLine />
@@ -37,10 +64,11 @@ const BookshelfPage = ({ books }) => {
 
 export async function getStaticProps() {
   const books = getBooksRead();
+  const booksByCategory = groupBooksByCategory(books);
 
   return {
     props: {
-      books,
+      booksByCategory,
     },
   };
 }
