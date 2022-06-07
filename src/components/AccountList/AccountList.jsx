@@ -1,7 +1,7 @@
 import { Icon } from "components";
-import styles from "./ContactList.module.scss";
+import styles from "./AccountList.module.scss";
 
-export const ContactList = ({ accounts }) => (
+export const AccountList = ({ accounts }) => (
   <div className={styles.component}>
     {Object.keys(accounts).map((account) => {
       const { text, href, icon } = accounts[account];

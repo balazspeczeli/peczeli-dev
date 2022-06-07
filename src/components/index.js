@@ -1,6 +1,6 @@
 export { BackToHome } from "./BackToHome";
 export { Book } from "./Book";
-export { ContactList } from "./ContactList";
+export { AccountList } from "./AccountList";
 export { CurrentlyReading } from "./CurrentlyReading";
 export { HorizontalLine } from "./HorizontalLine";
 export { Icon } from "./Icon";

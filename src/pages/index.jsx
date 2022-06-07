@@ -2,7 +2,7 @@ import { HorizontalLine, Layout } from "components";
 import {
   Welcome,
   LatestPosts,
-  Contact,
+  GetInTouch,
   MyBookshelf,
 } from "components/sections";
 
@@ -17,7 +17,7 @@ const IndexPage = ({ posts, currentlyReading, accounts }) => {
       <Welcome />
       <LatestPosts posts={posts} limit={5} />
       <MyBookshelf currentlyReading={currentlyReading} />
-      <Contact accounts={accounts} />
+      <GetInTouch accounts={accounts} />
       <HorizontalLine />
     </Layout>
   );
