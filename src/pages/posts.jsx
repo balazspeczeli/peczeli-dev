@@ -5,12 +5,10 @@ import { getPosts } from "lib/posts";
 const PostsPage = ({ posts }) => {
   return (
     <Layout title="Posts">
-      <div>
-        <h2>Posts</h2>
-        <PostsList posts={posts} />
-        <HorizontalLine />
-        <BackToHome />
-      </div>
+      <h2>Posts</h2>
+      <PostsList posts={posts} />
+      <HorizontalLine />
+      <BackToHome />
     </Layout>
   );
 };
