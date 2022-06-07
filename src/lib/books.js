@@ -11,68 +11,53 @@ const validateCoverImage = (coverImage) => {
   }
 };
 
-export const getBooks = () => {
+const getBooks = (options = {}) => {
   if (!fs.existsSync(bookshelfDirectory)) {
-    return [];
+    throw new Error(`${bookshelfDirectory} does not exist`);
   }
 
-  const books = [];
-  const files = fs
+  return fs
     .readdirSync(bookshelfDirectory)
     .map((fileName) => {
       const fullPath = path.join(bookshelfDirectory, fileName);
+      const fileContents = fs.readFileSync(fullPath, "utf8");
       const timeCreated = fs.statSync(fullPath).birthtime.getTime();
-      return { fullPath, timeCreated };
-    })
-    .sort((a, b) => b.timeCreated - a.timeCreated)
-    .map((file) => file.fullPath);
 
-  files.map((filePath) => {
-    const fileContents = fs.readFileSync(filePath, "utf8");
-    const matterResult = matter(fileContents);
+      const matterResult = matter(fileContents);
+      validateMetaData(matterResult.data, "title", fullPath);
+      validateMetaData(matterResult.data, "author", fullPath);
+      validateMetaData(matterResult.data, "yearOfPublication", fullPath);
 
-    validateMetaData(matterResult.data, "title", filePath);
-    validateMetaData(matterResult.data, "author", filePath);
-    validateMetaData(matterResult.data, "yearOfPublication", filePath);
+      const coverImage = `${path.parse(fullPath).name}.jpg`;
+      validateCoverImage(coverImage);
 
-    const coverImage = `${path.parse(filePath).name}.jpg`;
-    validateCoverImage(coverImage);
+      const { currentlyReading, title, author, lang } = matterResult.data;
 
-    const { draft, title, author, yearOfPublication, lang } = matterResult.data;
-
-    if (!draft) {
-      books.push({
+      const book = {
         title,
         author,
-        yearOfPublication,
-        cover: `/images/bookshelf/${coverImage}`,
         lang: lang ? lang : "en",
-        description: md.render(matterResult.content),
-      });
-    }
-  });
+        currentlyReading: Boolean(currentlyReading),
+        timeCreated,
+      };
 
-  return books;
+      if (options.compact) {
+        return book;
+      }
+
+      return {
+        ...book,
+        cover: `/images/bookshelf/${coverImage}`,
+        description: md.render(matterResult.content),
+      };
+    })
+    .sort((a, b) => b.timeCreated - a.timeCreated);
+};
+
+export const getBooksRead = () => {
+  return getBooks({ compact: false }).filter((book) => !book.currentlyReading);
 };
 
 export const getCurrentlyReading = () => {
-  if (!fs.existsSync(bookshelfDirectory)) {
-    return [];
-  }
-
-  const currentlyReading = [];
-  fs.readdirSync(bookshelfDirectory).map((file) => {
-    const fullPath = path.join(bookshelfDirectory, file);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const matterResult = matter(fileContents);
-    if (matterResult.data.draft) {
-      currentlyReading.push({
-        title: matterResult.data.title,
-        author: matterResult.data.author,
-        lang: matterResult.data.lang ? matterResult.data.lang : "en",
-      });
-    }
-  });
-
-  return currentlyReading;
+  return getBooks({ compact: true }).filter((book) => book.currentlyReading);
 };

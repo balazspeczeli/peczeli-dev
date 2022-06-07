@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { BackToHome, Book, HorizontalLine, Icon, Layout } from "components";
-import { getBooks } from "lib/books";
+import { getBooksRead } from "lib/books";
 
 const BookshelfPage = ({ books }) => {
   return (
@@ -36,7 +36,7 @@ const BookshelfPage = ({ books }) => {
 };
 
 export async function getStaticProps() {
-  const books = getBooks();
+  const books = getBooksRead();
 
   return {
     props: {
