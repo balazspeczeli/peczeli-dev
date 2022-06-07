@@ -2,53 +2,17 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { compareDesc } from "date-fns";
-
-import { postsDirectory, contentDirectory } from "./paths";
+import { postsDirectory } from "./paths";
 import { md, validateMetaData } from "./utils";
+import categories from "content/posts/categories.json";
 
-export const getPosts = (options = {}) => {
-  const posts = [];
-  const postPaths = fs
-    .readdirSync(postsDirectory)
-    .map((file) => path.parse(file).name);
-
-  postPaths.forEach((path) => {
-    let post;
-
-    if (options.pathOnly) {
-      post = { path };
-    } else {
-      const { title, date, category } = getPost(path);
-      post = { path, title, date, category };
-    }
-
-    posts.push(post);
-  });
-
-  posts.sort((a, b) => {
-    return compareDesc(new Date(a.date), new Date(b.date));
-  });
-
-  return posts;
-};
-
-const validPostCategories = {};
 const validatePostCategory = (category, fullPath) => {
-  if (validPostCategories[category]) {
-    return;
-  }
-
-  const labelsPath = path.join(contentDirectory, "labels.json");
-  const fileContents = fs.readFileSync(labelsPath, "utf8");
-  const labels = JSON.parse(fileContents);
-
-  if (!labels[category]) {
+  if (!categories[category]) {
+    const categoriesPath = path.join(postsDirectory, "categories.json");
     throw new Error(
-      `Could not find "${category}" in ${labelsPath} for ${fullPath}`
+      `Could not find "${category}" in ${categoriesPath} for ${fullPath}`
     );
   }
-
-  validPostCategories[category] = true;
 };
 
 export const getPost = (postId, options = {}) => {
@@ -70,4 +34,23 @@ export const getPost = (postId, options = {}) => {
   }
 
   return post;
+};
+
+export const getPosts = (options = {}) => {
+  return fs
+    .readdirSync(postsDirectory)
+    .filter((file) => path.parse(file).ext == ".md")
+    .map((file) => {
+      const postId = path.parse(file).name;
+
+      if (options.pathOnly) {
+        return { path: postId };
+      }
+
+      const { title, date, category } = getPost(postId);
+      return { path: postId, title, date, category };
+    })
+    .sort((a, b) => {
+      return compareDesc(new Date(a.date), new Date(b.date));
+    });
 };

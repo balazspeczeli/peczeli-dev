@@ -4,7 +4,7 @@ import { Label } from "components/Post/Label";
 
 import styles from "./PostsList.module.scss";
 
-import labels from "content/labels.json";
+import categories from "content/posts/categories.json";
 
 export const PostsList = ({ posts }) => (
   <div className={styles.component}>
@@ -14,7 +14,7 @@ export const PostsList = ({ posts }) => (
           <Date date={date} />
         </div>
         <div className={styles.label}>
-          <Label text={labels[category]} />
+          <Label text={categories[category]} />
         </div>
         <Link href={"/posts/" + path}>{title}</Link>
       </div>
