@@ -9,19 +9,11 @@ a {
   }
 
   &[target="_blank"]:not(.hide-icon) {
-    margin-right: 15px;
+    margin-right: 2px;
 
     &::after {
-      content: "";
-      position: absolute;
-      height: 12px;
-      width: 12px;
-      background-size: 11px;
-      background-image: url(/icons/link.svg);
-      background-position: center right;
-      background-repeat: no-repeat;
-      margin-top: 9px;
-      margin-left: 1px;
+      content: url(/icons/link.svg);
+      margin-left: 2px;
     }
   }
 
