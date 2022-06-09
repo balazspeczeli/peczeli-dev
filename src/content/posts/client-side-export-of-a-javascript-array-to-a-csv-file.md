@@ -6,7 +6,7 @@ category: "tutorial"
 
 ## Introduction
 
-I have just finished a project that involved a chart with complex interactions: the user can select multiple data sources, apply filters, and do some basic analaysis.
+I have just finished a project that involved a chart with complex interactions: the user can select multiple data sources, apply filters, and do some basic analysis.
 
 The business required that the user should export the data so it can be later imported in Excel for further analysis. Since the data is already there on the client and the CSV file format is very simple, we decided to do the transformation on the frontend.
 
