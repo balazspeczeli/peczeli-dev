@@ -1668,7 +1668,7 @@ I submitted my analysis to <a href="https://www.reddit.com/r/edm" target="_blank
         <td>4.02M</td>
       </tr>
       <tr>
-        <td colspan="5" class="footer">Check the list as a <img src="https://www.youtube.com/favicon.ico" class="youtube-logo" /> <a href="https://www.youtube.com/playlist?list=PL4ErO_7_XTSaAocC-uV3q1h9vPP7Y29Me" target="_blank" class="small">YouTube playlist</a>.</td>
+        <td colspan="5" class="footer">Check the list as a <img src="/images/posts/365-days-of-electronic-dance-music-on-youtube/youtube-logo.png" class="youtube-logo" /> <a href="https://www.youtube.com/playlist?list=PL4ErO_7_XTSaAocC-uV3q1h9vPP7Y29Me" target="_blank" class="small">YouTube playlist</a>.</td>
       </tr>
     </tbody>
   </table>
