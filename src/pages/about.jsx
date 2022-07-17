@@ -9,8 +9,8 @@ const AboutPage = () => {
         I was born in 1987 in <Icon src="icons/flags/hu.png" />
         Hungary, a small country in Central Europe. Like many in my generation,
         I have started my journey into computer programming by making websites
-        and simple video games during high school. Although I have did a Liberal
-        Arts degree at the University of Debrecen (Debrecen is Hungary's
+        and simple video games during high school. Although I did a Liberal Arts
+        degree at the University of Debrecen (Debrecen is Hungary's
         second-largest city), software development became my profession.
       </p>
       <p>
