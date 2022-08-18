@@ -108,7 +108,7 @@ My goto tool was <a href="https://github.com/ytdl-org/youtube-dl" target="_blank
 
 It can also be used directly to save the audio content of a video as an mp3 file:
 
-```terminal
+```shell
 $ yt-dlp -x --audio-format mp3 -f 140 <video-id>
 ```
 
