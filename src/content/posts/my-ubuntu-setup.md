@@ -38,7 +38,7 @@ An absolute must. I have zero problems with my displays since I have found this 
 
 ## Office apps
 
-### Browser
+### Web browser
 
 Most of the time I use Google Chrome, sometimes Mozilla Firefox.
 
@@ -56,7 +56,7 @@ Update (2021): <a href="https://workspace.google.com/marketplace/app/adobe_acrob
 
 ### Code editor, IDE
 
-VS Code works fine for me. Sometimes I open IntelliJ IDEA for Java development but often it's just too heavy for my personal projects.
+<a href="https://code.visualstudio.com/" target="_blank">VS Code</a> works fine for me. Sometimes I open IntelliJ IDEA for Java development but often it's just too heavy for my personal projects.
 
 ### Git client
 
@@ -98,13 +98,21 @@ The `convert` command is part of the `imagemagick` package.
 
 ### Screenshot tool
 
-I use <a href="https://shutter-project.org/" target="_blank">Shutter</a> for creating screenshots. <a href="https://flameshot.org/" target="_blank">Flameshot</a> also looks nice but haven't tried it yet.
+Ubuntu 22.04 comes with a great built-in screenshot tool but before that I haved used <a href="https://shutter-project.org/" target="_blank">Shutter</a>.
 
-### youtube-dl
+### YouTube downloader
 
-I use youtube-dl for downloading videos from YouTube so I can watch them later offline and for converting music videos into mp3 files. It can also download videos from Facebook and <a href="https://ytdl-org.github.io/youtube-dl/supportedsites.html" target="_blank">many other platforms</a>.
+I frequently download videos from YouTube so I can watch them using VLC (to have better control of playback speed and rewind step size).
 
-<a href="https://github.com/ytdl-org/youtube-dl" target="_blank">https://github.com/ytdl-org/youtube-dl</a>
+My goto tool was <a href="https://github.com/ytdl-org/youtube-dl" target="_blank">youtube-dl</a> but nowadays (August 2022) I use <a href="https://github.com/yt-dlp/yt-dlp" target="_blank">yt-dlp</a> which is actually a more actively maintained fork of youtube-dl.
+
+It can also be used directly to save the audio content of a video as an mp3 file:
+
+```terminal
+$ yt-dlp -x --audio-format mp3 -f 140 <video-id>
+```
+
+The quality of such audio files is far from good but usually it's okay when the goal is having something to listen to as background music.
 
 ### HEIF support
 
