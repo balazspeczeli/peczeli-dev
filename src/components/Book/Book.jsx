@@ -3,7 +3,7 @@ import styles from "./Book.module.scss";
 
 export const Book = ({ title, author, description, lang, cover }) => (
   <div className={styles.component}>
-    <div>
+    <div className={styles.description}>
       <div className={styles.title}>
         {lang === "hu" && <Icon src="/icons/flags/hu.png" />}
         {title}
