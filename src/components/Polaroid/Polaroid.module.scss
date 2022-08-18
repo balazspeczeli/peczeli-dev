@@ -1,0 +1,15 @@
+.component {
+  box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+  background: var(--bg-color-secondary);
+  padding: 1rem;
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.caption {
+  padding-top: 1rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.25rem;
+}

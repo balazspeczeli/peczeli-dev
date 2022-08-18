@@ -6,5 +6,6 @@ export { HorizontalLine } from "./HorizontalLine";
 export { Icon } from "./Icon";
 export { Introduction } from "./Introduction";
 export { Layout } from "./Layout";
+export { Polaroid } from "./Polaroid";
 export { Post } from "./Post";
 export { PostsList } from "./PostsList";
