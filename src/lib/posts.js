@@ -5,7 +5,7 @@ import { compareDesc } from "date-fns";
 import { postsDirectory } from "./paths";
 import {
   isMarkdownFile,
-  md,
+  renderMarkdown,
   validateMetaData,
   validateCategory,
 } from "./utils";
@@ -20,13 +20,13 @@ export const getPost = (postId, options = {}) => {
   validateMetaData(matterResult.data, "date", fullPath);
   validateMetaData(matterResult.data, "category", fullPath);
 
-  const { title, date, category } = matterResult.data;
+  const { title, date, category, toc } = matterResult.data;
   validateCategory(categories, category, fullPath);
 
   const post = { path: fullPath, title, date, category };
 
   if (options.includeContent) {
-    post.content = md.render(matterResult.content);
+    post.content = renderMarkdown(matterResult.content, toc);
   }
 
   return post;

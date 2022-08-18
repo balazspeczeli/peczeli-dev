@@ -1,0 +1,25 @@
+.table-of-contents {
+  width: 300px;
+  position: fixed;
+  top: 70px;
+  left: calc(50% + 720px / 2 + 15px);
+  font-size: 0.95rem;
+
+  a {
+    color: var(--normal-text);
+  }
+
+  ul {
+    margin: 0;
+    padding-inline-start: 20px;
+  }
+
+  .toc-container-header {
+    font-weight: 500;
+  }
+
+  // 720 + 2 * (300 + 15) = 1350
+  @media screen and (max-width: 1350px) {
+    display: none;
+  }
+}

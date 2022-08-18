@@ -4,9 +4,9 @@ import matter from "gray-matter";
 import { bookshelfDirectory, bookCoversDirectory } from "./paths";
 import {
   isMarkdownFile,
-  md,
   validateMetaData,
   validateCategory,
+  renderMarkdown,
 } from "./utils";
 import categories from "content/bookshelf/categories.json";
 
@@ -59,7 +59,7 @@ const getBooks = (options = {}) => {
         ...book,
         category,
         cover: `/images/bookshelf/${coverImage}`,
-        description: md.render(matterResult.content),
+        description: renderMarkdown(matterResult.content),
       };
     })
     .sort((a, b) => b.timeCreated - a.timeCreated);

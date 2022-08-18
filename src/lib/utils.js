@@ -1,10 +1,24 @@
 import path from "path";
 import markdownit from "markdown-it";
+import markdownitAnchor from "markdown-it-anchor";
+import markdownitTOC from "markdown-it-table-of-contents";
+
 import prism from "markdown-it-prism";
 
-export const md = markdownit({
+const md = markdownit({
   html: true,
-}).use(prism, {});
+})
+  .use(prism, {})
+  .use(markdownitAnchor)
+  .use(markdownitTOC, {
+    includeLevel: [2, 3],
+    containerHeaderHtml:
+      '<div class="toc-container-header">Table of Contents</div>',
+  });
+
+export const renderMarkdown = (content, includeTOC = false) => {
+  return md.render((includeTOC ? "[[toc]]" : "") + content);
+};
 
 export const validateMetaData = (metadata, prop, filePath) => {
   if (metadata[prop] === undefined) {

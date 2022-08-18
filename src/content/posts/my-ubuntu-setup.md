@@ -2,6 +2,7 @@
 title: "My Ubuntu setup"
 date: "2019-07-12"
 category: "personal"
+toc: true
 ---
 
 I have been using Ubuntu as my primary OS for personal computing since 2015. My then notebook was a bit old and I had performance issues with Windows, so I have decided to give Ubuntu a try and stuck with it.

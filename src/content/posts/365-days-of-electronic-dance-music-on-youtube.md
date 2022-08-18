@@ -2,6 +2,7 @@
 title: "365 Days of Electronic Dance Music on YouTube"
 date: "2016-07-03"
 category: "side-project"
+toc: true
 ---
 
 <style>
@@ -66,7 +67,7 @@ Used technologies:
 
 <img src="/images/posts/365-days-of-electronic-dance-music-on-youtube/party.gif" class="centered" />
 
-# Introduction
+## Introduction
 
 While some say that electronic dance music is just a fad, it is undoubtedly one of the most popular music genres today.
 
@@ -76,7 +77,7 @@ At the beginning I have asked fairly simple questions like “Which are the most
 
 In the following I present the results of my analysis and I hope you too will find some interesting bits and pieces about the worldwide EDM community.
 
-## Dataset
+### Dataset
 
 The analysis is based on the content uploaded to YouTube channels dedicated to electronic dance music. The following channels were being monitored:
 
@@ -291,11 +292,11 @@ Though data collection was started a bit earlier, only the period between 1 July
   </table>
 </div>
 
-# Uploads and Views
+## Uploads and Views
 
 The number of uploads shows how much new music is getting released by EDM record labels (supply) and the number of views can tell us whether people are actually interested in that new content (demand).
 
-## Daily Uploads
+### Daily Uploads
 
 <img src="/images/posts/365-days-of-electronic-dance-music-on-youtube/figures/figure-1-number-of-daily-uploads-1.png" class="centered" />
 
@@ -307,7 +308,7 @@ While some of the spikes are caused by a single channel uploading many videos at
 
 As one would expect, the least number of uploads are made on Saturday and Sunday. Labels in general are more likely to release new music just before the weekend: 1 in 4 of new uploads are made on Friday. The beginning of the week, Monday and Tuesday, are also a popular choice for uploading new content, these two days combined with Friday are responsible for 57% of all uploads.
 
-## Daily Views
+### Daily Views
 
 <img src="/images/posts/365-days-of-electronic-dance-music-on-youtube/figures/figure-3-number-of-daily-views-1.png" class="centered" />
 
@@ -321,7 +322,7 @@ Let’s look at the day of the week breakdown of views:
 
 A higher than average number of views are recorded on weekends, especially on Saturdays. Not surprisingly, the number of views on Mondays are the lowest.
 
-## Uploads vs. Views
+### Uploads vs. Views
 
 **Fig. 5.** shows the relative difference of the actual data to a situation where the number of daily uploads and views were equal for all days of the week:
 
@@ -331,11 +332,11 @@ Even tough that the number of uploads on an average Monday is 8% higher than the
 
 Both Wednesday and Thursday has less than average number of uploads and views: it seems that both the labels and the fans are waiting for the weekend.
 
-# Popularity
+## Popularity
 
 Some songs quickly become very popular, others never get more than a few thousand views. While no amount of data will ever tell what exactly makes a hit, it can tell which songs can be considered as such.
 
-## Distribution of Views
+### Distribution of Views
 
 <img src="/images/posts/365-days-of-electronic-dance-music-on-youtube/figures/figure-6-distribution-of-videos-based-on-number-of-views.png" class="centered" />
 
@@ -428,7 +429,7 @@ Some songs quickly become very popular, others never get more than a few thousan
 
 To be in the top 10% based on views, a video must have been played at least 730,000 times and only 24 of all the 4,326 uploads (0.55%) has reached more than 10 million views.
 
-## Top 50 Most viewed EDM Songs (July 2015 – July 2016)
+### Top 50 Most viewed EDM Songs (July 2015 – July 2016)
 
 <div class="songs-list">
   <table>
@@ -541,7 +542,7 @@ To be in the top 10% based on views, a video must have been played at least 730,
 
 The problem with determining the popularity of a song based on the absolute number of views it has received is that it favors older uploads (because in general, the more time elapsed since upload, the more views an upload has).
 
-## Growth
+### Growth
 
 We need to take a look on growth to better understand which songs are the currently most popular ones.
 
@@ -573,7 +574,7 @@ Mahmut Orhan feat. Sena Sener – Feel</a> is an example of song that was upload
 
 <img src="/images/posts/365-days-of-electronic-dance-music-on-youtube/figures/figure-12-growth-profile-for-mahmut-orhan-feel.png" class="centered" />
 
-## Top 50 EDM Songs of Summer 2016
+### Top 50 EDM Songs of Summer 2016
 
 Based on the analysis of the growth profiles I have compiled a list of the songs that are likely to dominate the sound of summer 2016 (Age and Views are of 1 July 2016, Age is the days elapsed since the date it was uploaded):
 
@@ -686,7 +687,7 @@ Based on the analysis of the growth profiles I have compiled a list of the songs
 
 Keep in mind that this is just one of the many possible ways to rank the songs based on their potential to become the major hits of summer 2016 (and some of them are already have became), so don’t be offended if your favorite new song is not on the list!
 
-## Top record Labels
+### Top record Labels
 
 Finding out which record labels are the top ones based on YouTube views is not a straightforward task because not only that each label puts a different emphasis on this distribution channel, their artists usually have their own YouTUbe channels which are not part of the dataset.
 
@@ -696,7 +697,7 @@ While it would be risky to draw conclusions about the exact market share of each
 
 This fact comes by no surprise considering that these are among the EDM labels that were started the earliest (Kontor and Ultra in 1995, Spinnin’ in 1999, Armada in 2003). However, it is worth to note that Proximity was started in 2009 and it is already the 5th most popular YouTube channel for EDM.
 
-# Conclusions
+## Conclusions
 
 Though this analysis is based solely on one platform, it provides widescale insights into the worldwide EDM community. The key points are:
 
@@ -708,7 +709,7 @@ Though this analysis is based solely on one platform, it provides widescale insi
 
 The music industry is so complex that predicting future hits is impossible, but seeing what resonates with the audience is essential in supporting an artist’s career. While this report shows what happened, record labels could gain actionable insights by getting to know why it happened so.
 
-## When will the bass drop?
+### When will the bass drop?
 
 Has EDM already reached its peak or it will become even more popular in the coming years? Only time can tell that for sure but currently there’s no sign of any slowdown!
 
@@ -716,7 +717,7 @@ Has EDM already reached its peak or it will become even more popular in the comi
   <iframe  src="https://www.youtube.com/embed/XCawU6BE8P8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-# Update: Blogosphere coverage
+## Update: Blogosphere coverage
 
 I submitted my analysis to <a href="https://www.reddit.com/r/edm" target="_blank">/r/edm</a> and, to my biggest surprise, a few blogs have picked it up and published their own articles on it:
 
@@ -732,9 +733,9 @@ I submitted my analysis to <a href="https://www.reddit.com/r/edm" target="_blank
 - Study Shows 7% of EDM Tracks Go Viral
   <a href="https://web.archive.org/web/20170717133429/http://news.bpmsupreme.com/study-shows-7-edm-tracks-go-viral/" target="_blank">http://news.bpmsupreme.com/study-shows-7-edm-tracks-go-viral/</a>
 
-# Appendix
+## Appendix
 
-## List #1: Top 50 Most viewed EDM Songs (July 2015 – July 2016)
+### List #1: Top 50 Most viewed EDM Songs (July 2015 – July 2016)
 
 <div class="songs-list">
   <table id="most-popular-uploads-absolute">
@@ -1205,7 +1206,7 @@ I submitted my analysis to <a href="https://www.reddit.com/r/edm" target="_blank
   </table>
 </div>
 
-## List #2: Top 50 EDM Songs of Summer 2016 (Prediction)
+### List #2: Top 50 EDM Songs of Summer 2016 (Prediction)
 
 <div class="songs-list">
   <table id="most-popular-uploads-relative">
