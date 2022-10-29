@@ -1,13 +1,10 @@
 import styles from "./Polaroid.module.scss";
 
-export const Polaroid = ({ src, caption, rotateBy = 0 }) => {
+export const Polaroid = ({ src, caption }) => {
   return (
-    <div
-      class={styles.component}
-      style={{ transform: `rotate(${rotateBy}deg)` }}
-    >
+    <div class={styles.component}>
       <img src={src} />
-      <div className={styles.caption}>{caption}</div>
+      {caption && <div className={styles.caption}>{caption}</div>}
     </div>
   );
 };

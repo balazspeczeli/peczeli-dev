@@ -33,7 +33,7 @@ data.forEach((row) => {
 });
 ```
 
-Then we escape the special characters with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" target="_blank">encodeURIComponent</a> (so that it can be later used as part of a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs" target="_blank">Data URL</a>):
+Then we escape the special characters with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" target="_blank">encodeURIComponent</a> (so that it can be later used as part of a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs" target="_blank">Data URL</a>):
 
 ```javascript
 const encoded = encodeURIComponent(csv);

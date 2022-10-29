@@ -50,7 +50,7 @@ I use Gmail, Google Docs and Google Sheets for these tasks.
 
 <a href="https://okular.kde.org/" target="_blank">Okular</a> is perfect for PDF and ePub documents. I use its highlighter feature extensively.
 
-Update (2021): <a href="https://workspace.google.com/marketplace/app/adobe_acrobat_%E2%80%93_pdf_and_esignature_tools/80763634447" target="_blank">Adobe Acrobat for Google Drive</a> is also a decent choice for reading PDF documents. The files are stored on Google Drive and modifications (e.g. highlights) are saved automatically.
+<a href="https://workspace.google.com/marketplace/app/adobe_acrobat_%E2%80%93_pdf_and_esignature_tools/80763634447" target="_blank">Adobe Acrobat for Google Drive</a> is also a decent choice for reading PDF documents. The files are stored on Google Drive and modifications (e.g. highlights) are saved automatically.
 
 ## Development
 
@@ -70,31 +70,27 @@ It has some nice tools but I don't actually use it as part of my development wor
 
 ## Multimedia
 
-### VLC media player
+### Media player
 
-Plays almost all kinds of formats and very fast. <a href="https://play.google.com/store/apps/details?id=org.videolan.vlc&hl=en" target="_blank">VLC for Android</a> is also pretty good.
+<a href="https://www.videolan.org/" target="_blank">VLC</a> plays almost all kinds of formats and is very fast.
 
-<a href="https://www.videolan.org/" target="_blank">https://www.videolan.org/</a>
+<a href="https://play.google.com/store/apps/details?id=org.videolan.vlc&hl=en" target="_blank">VLC for Android</a> is also pretty good.
 
-### Audacity
+### Audio editor
 
-Lightweight and easy to use. Perfect for editing audio files, might not be the best for complex workflows.
+<a href="https://www.audacityteam.org/" target="_blank">Audacity</a> is lightweight and easy to use. It is perfect for recording and cutting audio files, might not be the best for complex workflows.
 
-<a href="https://www.audacityteam.org/" target="_blank">https://www.audacityteam.org/</a>
+### Image processing
 
-### imagemagick
+<a href="https://imagemagick.org/" target="_blank">imagemagick</a> is a command line tool for manipulating images. It has many features, I mostly use it for resizing, cropping, and compressing images.
 
-A command line tool for manipulating images. It has many features, I mostly use it for resizing, cropping, and compressing images.
-
-<a href="https://imagemagick.org/" target="_blank">https://imagemagick.org/</a>
-
-#### Convert all `png` files in current directory to `jpg`s
+For example, one can easily convert all `png` files in current directory to `jpg`s by issuing:
 
 ```shell
 for file in *.png; do convert $file ${file/%.png/.jpg}; done
 ```
 
-The `convert` command is part of the `imagemagick` package.
+(The `convert` command is part of the `imagemagick` package.)
 
 ### Screenshot tool
 
