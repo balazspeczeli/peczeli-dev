@@ -713,8 +713,17 @@ The music industry is so complex that predicting future hits is impossible, but 
 
 Has EDM already reached its peak or it will become even more popular in the coming years? Only time can tell that for sure but currently there’s no sign of any slowdown!
 
+<!--
 <div class="responsive-youtube-embed">
   <iframe  src="https://www.youtube.com/embed/XCawU6BE8P8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+-->
+
+<div style="text-align: center;">
+  <a href="https://www.youtube.com/watch?v=XCawU6BE8P8" target="_blank">
+    <img src="https://img.youtube.com/vi/XCawU6BE8P8/sddefault.jpg" alt="Thumbnail for 'When Will The Bass Drop?' (a satirical about EDM music)" class="centered" style="max-width: 450px;" />
+  </a>
+  <a href="https://www.youtube.com/watch?v=XCawU6BE8P8" target="_blank">When Will The Bass Drop?</a> (a satirical video about EDM music)
 </div>
 
 ## Update: Blogosphere coverage

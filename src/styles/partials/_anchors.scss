@@ -8,7 +8,7 @@ a {
     text-decoration: underline;
   }
 
-  &[target="_blank"]:not(.hide-icon) {
+  &[target="_blank"]:not(.hide-icon):not(:has(img)) {
     margin-right: 2px;
 
     &::after {
