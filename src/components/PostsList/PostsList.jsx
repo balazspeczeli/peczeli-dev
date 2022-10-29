@@ -8,15 +8,15 @@ import categories from "content/posts/categories.json";
 
 export const PostsList = ({ posts }) => (
   <div className={styles.component}>
-    {posts.map(({ path, title, date, category }) => (
-      <div className={styles.post} key={path}>
+    {posts.map(({ id, title, date, category }) => (
+      <div className={styles.post} key={id}>
         <div className={styles.date}>
           <Date date={date} />
         </div>
         <div className={styles.label}>
           <Label text={categories[category]} />
         </div>
-        <Link href={"/posts/" + path}>{title}</Link>
+        <Link href={"/posts/" + id}>{title}</Link>
       </div>
     ))}
   </div>

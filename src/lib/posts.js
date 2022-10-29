@@ -11,8 +11,8 @@ import {
 } from "./utils";
 import categories from "content/posts/categories.json";
 
-export const getPost = (postId, options = {}) => {
-  const fullPath = path.join(postsDirectory, postId + ".md");
+export const getPost = (id, options = {}) => {
+  const fullPath = path.join(postsDirectory, id + ".md");
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
 
@@ -23,7 +23,7 @@ export const getPost = (postId, options = {}) => {
   const { title, date, category, toc } = matterResult.data;
   validateCategory(categories, category, fullPath);
 
-  const post = { path: fullPath, title, date, category };
+  const post = { id, title, date, category };
 
   if (options.includeContent) {
     post.content = renderMarkdown(matterResult.content, toc);
@@ -37,14 +37,14 @@ export const getPosts = (options = {}) => {
     .readdirSync(postsDirectory)
     .filter(isMarkdownFile)
     .map((file) => {
-      const postId = path.parse(file).name;
+      const id = path.parse(file).name;
 
       if (options.pathOnly) {
-        return { path: postId };
+        return { id };
       }
 
-      const { title, date, category } = getPost(postId);
-      return { path: postId, title, date, category };
+      const { title, date, category } = getPost(id);
+      return { id, title, date, category };
     })
     .sort((a, b) => {
       return compareDesc(new Date(a.date), new Date(b.date));

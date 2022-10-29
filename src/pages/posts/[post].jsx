@@ -15,7 +15,7 @@ const OtherPosts = ({ posts }) => (
 );
 
 const PostPage = ({ currentPost, allPosts }) => {
-  const otherPosts = allPosts.filter((post) => post.path !== currentPost.path);
+  const otherPosts = allPosts.filter((post) => post.id !== currentPost.id);
 
   return (
     <Layout title={currentPost.title}>
@@ -32,7 +32,7 @@ export const getStaticPaths = () => {
   const paths = [];
   const posts = getPosts({ pathOnly: true });
   posts.forEach((post) => {
-    paths.push({ params: { post: post.path } });
+    paths.push({ params: { post: post.id } });
   });
 
   return {
