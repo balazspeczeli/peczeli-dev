@@ -1,9 +1,9 @@
 .table-of-contents {
-  width: 300px;
-  position: fixed;
-  top: 70px;
-  left: calc(50% + 720px / 2 + 15px);
-  font-size: 0.95rem;
+  margin: 2rem 0;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: var(--border-color);
+  padding: 1.75rem 0;
 
   a {
     color: var(--normal-text);
@@ -16,10 +16,16 @@
 
   .toc-container-header {
     font-weight: 500;
+    margin-bottom: 0.5rem;
   }
 
   // 720 + 2 * (300 + 15) = 1350
-  @media screen and (max-width: 1350px) {
-    display: none;
+  @media screen and (min-width: 1349px) {
+    font-size: 0.95rem;
+    width: 300px;
+    position: fixed;
+    top: 70px;
+    left: calc(50% + 720px / 2 + 15px);
+    border: 0;
   }
 }
