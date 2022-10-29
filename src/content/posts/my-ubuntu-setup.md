@@ -7,7 +7,7 @@ toc: true
 
 I have been using Ubuntu as my primary OS for personal computing since 2015. My then notebook was a bit old and I had performance issues with Windows, so I have decided to give Ubuntu a try and stuck with it.
 
-<img src="/images/posts/my-ubuntu-setup/ubuntu1804.jpg" alt="A screenshot of Ubuntu 18.04" class="centered"/>
+<img src="/images/posts/my-ubuntu-setup/ubuntu1804.jpg" alt="A screenshot of Ubuntu 18.04" class="centered max-width-500"/>
 
 My current notebook is a Dell Inspiron 5570 and I don't remember experiencing any issues that could not be solved with a little bit of Googling.
 
